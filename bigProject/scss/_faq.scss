@@ -1,0 +1,22 @@
+@import "variables";
+.faqBottom {
+    h2{
+    padding-top:  30px;
+    font-size: 1.6em;
+    }
+    a{font-size: 1.0em;}
+
+}
+.faqMain{background-color: white;
+h1{padding:10px}}
+#faqF{
+    color:$primary;
+    
+}
+#faqA{color:$secondary}
+#faqQ{color:$tertiary } 
+
+#faqF, #faqA, #faqQ{
+    font-size: 10rem;text-shadow:  -5px -5px #999, -10px -10px #666, -15px -15px #333;
+}
+.faqHead{text-align: center;}

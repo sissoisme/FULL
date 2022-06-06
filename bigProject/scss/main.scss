@@ -1,0 +1,47 @@
+@import "home";
+@import "about";
+@import "media";
+@import "header";
+@import "nav";
+@import "footer";
+@import "contact";
+@import "variables";
+@import "faq";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // background-image: url(./../media/beeds.png);
+    // background-repeat: repeat;
+    
+    
+     background-image: linear-gradient(to bottom right, $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $primary, $secondary, $tertiary);
+}
+
+hr {
+    margin-top: 12vh;
+    margin-bottom:-2vh;
+}
+
+.gapOne {
+    margin-top: 22vh !important;
+}
+
+.gapTwo {
+    margin-top: 18vh !important;
+}
+
+.short {
+    margin: 0 auto;
+    width: 80%;
+}
+.emptyBox{
+    width: 100vw;
+    padding: 200px;
+    height: 100ch;
+    background-color: blanchedalmond;
+}
