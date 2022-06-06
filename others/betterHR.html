@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    .change {
+      border: 0;
+      height: 0.5rem;
+      width: 80vh;
+      ;
+      box-shadow: 0px 0px 0px 1px;
+    }
+
+    .skew {
+      transform: skew(-45deg);
+    }
+
+    .skewRverse {
+      transform: skew(45deg);
+    }
+
+    #color1 {
+      background: -webkit-linear-gradient(left, green, red, yellow, blue)
+    }
+
+    #color2 {
+      background: -webkit-radial-gradient(center, white 5%, purple 90%, black 5%)
+    }
+
+    #color3 {
+      background: -webkit-radial-gradient(left, yellow 30%, red 100%)
+    }
+
+    #color4 {
+      background: linear-gradient(to right, yellow 0%, yellow 12.5%, black 12.5%, black 25%, yellow 25%, yellow 37.5%, black 37.5%, black 50%, yellow 50%, yellow 62.5%, black 62.5%, black 75%, yellow 75%, yellow 87.5%, black 87.5%, black 100%)
+    }
+
+
+
+    #flash {
+      animation: flash 0.4s infinite ;border: non;
+    }
+
+    @keyframes flash {
+      0%,100% {
+        background: -webkit-linear-gradient(left, green, red, yellow, blue)
+      }
+
+      25% {
+        background: -webkit-linear-gradient(left, blue, green, red, yellow)
+      }
+
+      50% {
+        background: -webkit-linear-gradient(left, yellow, blue, green, red)
+      }
+
+      75% {
+        background: -webkit-linear-gradient(left, red, yellow, blue, green)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>BETTER HR</h1>
+  <hr id="color1" class="change">
+  <hr id="color2" class="change skew">
+  <hr id="color3" class="change skew">
+  <hr id="color4" class="change skewRverse">
+  <hr id="flash" class="change skewRverse">
+</body>
+
+</html>

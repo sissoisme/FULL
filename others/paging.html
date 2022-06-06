@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOVER</title>
+    <style>
+        body {
+            display: flex;
+            background-color: #18272F;
+            font-family: 'Poppins', sans-serif;
+            font-size: 5em;
+            line-height: 1.5;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            width: 80%;
+            box-shadow: 0 0 12px white;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            border: 12px rgb(2, 3, 0) double;
+        }
+
+        a {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: #18272F;
+            font-weight: 700;
+            vertical-align: top;
+        }
+
+        a::before,
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+
+        a::before {
+            background-color: #54b3d6;
+            height: 2px;
+            bottom: 0;
+            transform-origin: 100% 50%;
+            transform: scaleX(0);
+            transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        a::after {
+            content: attr(data-replace);
+            height: 100%;
+            top: 0;
+            transform-origin: 100% 50%;
+            transform: translate3d(0, 100%, 0);
+            transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+            color: #54b3d6;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        p {
+            letter-spacing: 0.4em;
+        }
+
+
+        a:hover::after {
+            transform: translate3d(0, 0, 0);
+        }
+
+        a span {
+            display: inline-block;
+            transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        a:hover span {
+            transform: translate3d(0, 200%, 0);
+        }
+
+        span {
+            color: red;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        @media(max-width:550px) {
+            body {
+                font-size: 1.5em;
+            }
+
+            div {
+                height: 10vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p><a href="#" id="style-2" data-replace="<"><span> <</span></a></p> 
+        <p><a href="#" id="style-2" data-replace="1"><span>1</span></a></p>
+        <p><a href="#" id="style-2" data-replace="2"><span>2</span></a></p>
+        <p><a href="#" id="style-2" data-replace="3"><span>3</span></a></p>
+        <p><a href="#" id="style-2" data-replace="hello"><span>4</span></a></p>
+        <p><a href="#" id="style-2" data-replace="5"><span>5</span></a></p>
+        <p><a href="#" id="style-2" data-replace="6"><span>6</span></a></p>
+        <p><a href="#" id="style-2" data-replace="7"><span>7</span></a></p>
+        <p><a href="#" id="style-2" data-replace="8"><span>8</span></a></p>
+        <p><a href="#" id="style-2" data-replace="9"><span>9</span></a></p>
+        <p><a href="#" id="style-2" data-replace=">"><span>></span></a></p>
+
+    </div>
+</body>
+
+</html>

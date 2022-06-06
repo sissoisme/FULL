@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flickeringneon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background-image: url(Media/wall.jpg);
+            background-size: cover;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .box {
+            background-color: rgba(74, 97, 214, 0.15);
+            width: 40vw;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 75px;
+            border: 10px solid #fff;
+            box-shadow:
+                0 0 7px #fff,
+                0 0 12px #fff,
+                0 0 24px #fff,
+                0 0 41px rgb(149, 104, 254),
+                0 0 156px rgb(114, 2, 62);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 5em;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 12px #fff,
+                0 0 24px #fff,
+                0 0 41px rgb(149, 104, 254),
+                0 0 65px rgb(149, 104, 254),
+                0 0 80px rgb(149, 104, 254),
+                0 0 91px rgb(114, 2, 62),
+                0 0 156px rgb(114, 2, 62);
+            animation: flicker 1.5s infinite alternate;
+
+        }
+
+        @keyframes flicker {
+
+            0%,
+            10%,
+            20%,
+            30%,
+            50%,
+            70%,
+            100% {
+
+                text-shadow:
+                    0 0 7px #fff,
+                    0 0 12px #fff,
+                    0 0 24px #fff,
+                    0 0 41px rgb(149, 104, 254),
+                    0 0 65px rgb(149, 104, 254),
+                    0 0 80px rgb(149, 104, 254),
+                    0 0 91px rgb(114, 2, 62),
+                    0 0 156px rgb(114, 2, 62);
+
+            }
+
+
+
+            20%,
+            24%,
+            55% {
+                text-shadow:none
+            }
+
+        }
+        @media (max-width:550px){
+            h1{font-size: 3em;}
+            .box{width: 80%;
+                height: 20vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>DRINKS 🍸︎</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

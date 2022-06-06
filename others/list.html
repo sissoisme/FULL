@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list scroll</title>
+    <style>
+        .floating-stack {
+            background: #455a64;
+            color: #fff;
+            height: 160px;
+            width: 300px;
+            border: double black 3px;
+            overflow-y: auto;
+            box-shadow:
+                0 0 4px rgb(255, 255, 255),
+                0 0 14px yellow,
+                0 0 24px rgb(255, 255, 255),
+                0 0 34px yellow,
+                0 0 44px rgb(255, 255, 255);
+        }
+
+        .floating-stack>dl {
+            margin: 0 0 1rem;
+            display: grid;
+            grid-template-columns: 2.5rem 1fr;
+            align-items: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+
+        .floating-stack dt {
+            position: sticky;
+            top: 0.5rem;
+            left: 0.5rem;
+            font-weight: bold;
+            background: #263238;
+            color: #ffffff;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            padding: 0.25rem 1rem;
+            grid-column: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            border: 4px solid rgb(172, 172, 250);
+            animation: glow 1s infinite alternate;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+        }
+
+        /* @keyframes glow {
+            0%{
+                border: 3px solid rgb(255, 255, 255);
+                color: #000000;
+            }
+            20%{
+                border: 3px solid rgb(0, 0, 0);
+                color: #fff;
+            }
+            40%{
+                border: 3px solid rgb(255, 0, 0);
+                color: #000000;
+            }
+            60%{
+                border: 3px solid rgb(0, 0, 0);
+                color: #fff;
+            }
+            80%{
+                border: 3px solid rgb(0, 0, 255);
+                color: #000000;
+            }
+            100%{
+                border: 3px solid rgb(0, 0, 0);
+                color: #fff;
+            }
+        } */
+
+        .floating-stack dd {
+            grid-column: 2;
+            margin: 0;
+            padding: 0.75rem;
+            padding-left: 20px;
+            
+        }
+
+        body {
+            background: #000000;
+            color: white;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1
+        style="text-align: center;">SCROLL DOWN TO <br> SEE THE EFECT</h1>
+        <div class="floating-stack">
+            <dl >
+                <dt>A</dt>
+                <dd>Acura</dd>
+                <dd>Alfa Romeo</dd>
+                <dd>Audi</dd>
+
+                <dt>B</dt>
+                <dd>Bentley</dd>
+                <dd>BMW</dd>
+                <dd>Buick</dd>
+
+                <dt>C</dt>
+                <dd>Cadillac</dd>
+                <dd>Chevrolet</dd>
+                <dd>Chrysler</dd>
+                <dd>Citroën</dd>
+
+                <dt>D</dt>
+                <dd>Dacia</dd>
+                <dd>Dodge</dd>
+
+                <dt>F</dt>
+                <dd>Ferrari</dd>
+                <dd>Fiat</dd>
+                <dd>Ford</dd>
+
+                <dt>H</dt>
+                <dd>Honda</dd>
+                <dd>Hyundai</dd>
+
+                <dt>I</dt>
+                <dd>Infiniti</dd>
+
+                <dt>J</dt>
+                <dd>Jaguar</dd>
+                <dd>Jeep</dd>
+
+                <dt>K</dt>
+                <dd>KIA</dd>
+
+                <dt>L</dt>
+                <dd>Lamborghini</dd>
+                <dd>Lancia</dd>
+                <dd>Land Rover</dd>
+                <dd>Lexus</dd>
+
+                <dt>M</dt>
+                <dd>Maserati</dd>
+                <dd>Maybach</dd>
+                <dd>Mazda</dd>
+                <dd>Mercedes</dd>
+                <dd>MG</dd>
+                <dd>Mini</dd>
+                <dd>Mitsubishi</dd>
+
+                <dt>N</dt>
+                <dd>Nissan</dd>
+
+                <dt>O</dt>
+                <dd>Opel</dd>
+
+                <dt>P</dt>
+                <dd>Peugeot</dd>
+                <dd>Pontiac</dd>
+                <dd>Porsche</dd>
+
+                <dt>R</dt>
+                <dd>Renault</dd>
+                <dd>Rolls-Royce</dd>
+                <dd>Rover</dd>
+
+                <dt>S</dt>
+                <dd>Saab</dd>
+                <dd>Seat</dd>
+                <dd>Subaru</dd>
+                <dd>Suzuki</dd>
+
+                <dt>T</dt>
+                <dd>Tesla</dd>
+                <dd>Toyota</dd>
+
+                <dt>V</dt>
+                <dd>Valmet Automotive</dd>
+                <dd>Vauxhall</dd>
+                <dd>Volkswagen</dd>
+                <dd>Volvo</dd>
+
+
+            </dl>
+        </div>
+    </div>
+</body>
+
+</html>

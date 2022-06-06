@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mosaic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            background-color: rgb(190, 0, 0);
+            font: 1.1em Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        figure {
+            margin: 0;
+            display: grid;
+            grid-template-rows: 1fr auto;
+            break-inside: avoid;
+            color: azure;
+            background-color: cornflowerblue;
+            text-align: center;
+            border: 5px rgb(0, 0, 0) solid;
+        }
+
+        figure>img {
+            grid-row: 1 / -1;
+            grid-column: 1;
+        }
+
+        figure a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        figcaption {
+            grid-row: 2;
+            grid-column: 1;
+            background-color: rgba(255, 255, 255, .5);
+            padding: .2em .5em;
+            justify-self: start;
+            color: blue;
+        }
+
+
+        .container {
+            width: 100vw;
+            height: 80vh;
+            margin-top: 10vh;
+            overflow-y: scroll;
+            border-top: 10px solid black;
+            border-bottom: 10px solid black;
+        }
+
+        figure div {
+            padding: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 125%;
+        }
+
+        .box {
+            column-count: 5;
+            column-gap: 0px;
+            overflow-y: hidden;
+            background-image: url(Media/mosaicbg.jpg);
+            background-size: 100%;
+        }
+
+        .pink {
+            background-color: rgb(250, 0, 96);
+            color: white;
+        }
+
+        .green {
+            background-color: green;
+            color: #000;
+        }
+
+        .orange {
+            background-color: orange;
+            color: black
+        }
+
+        .purple {
+            background-color: purple;
+            color: white;
+        }
+
+        .yellow {
+            background-color: yellow;
+            color: black;
+        }
+
+        figcaption span {
+            color: purple;
+            font-weight: 700;
+            padding: 0.2em;
+            display: inline;
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                font-size: 0.9em;
+                color: rgb(176, 106, 69);
+
+            }
+
+            100% {
+                font-size: 1em;
+
+
+            }
+
+
+
+        }
+
+        @media(max-width:600px) {
+            .box {
+                column-count: 3;
+                font-size: 0.75em;
+            }
+
+            figure {
+                max-height: 280px;
+            }
+
+            figure div {
+                padding: 15px 10px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            img {
+                max-height: 280px;
+            }
+
+            figcaption span {
+                color: purple;
+                font-weight: 700;
+                padding: 0.2em;
+                display: inline;
+                animation: glow 1s infinite alternate;
+            }
+
+            @keyframes glow {
+                0% {
+                    font-size: 0.9em;
+                    color: rgb(176, 106, 69);
+
+                }
+
+                100% {
+                    font-size: 1em;
+
+
+                }
+
+
+
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta.</p>
+                </div>
+                <figcaption><a href="#">#88<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie1.jpg" alt="a river in the snow" />
+                <figcaption><a href="#">#87</a></figcaption>
+            </figure>
+            <figure class="orange">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta Lorem ipsum dolor
+                        sit
+                        amet elit. Culpa reiciendis assumenda nobis commodi saepe aspernatur..
+                    </p>
+                </div>
+                <figcaption><a href="#">#86<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure class="pink">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat
+                        voluptates iusto pariatur, alias amet exercitationem saepe assumenda, dicta debitis natus animi
+                        et nesciunt architecto sapiente perferendis. Eos, praesentium at! sit amet consectetur</p>
+                </div>
+                <figcaption><a href="#">#85<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <img src="Media/movie2.jpg" alt="a single checked balloon" />
+                <figcaption><a href="#">#84</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/big1 - Copy.jpg" alt="a hot air balloon shaped like a dog" />
+                <figcaption><a href="#">#83</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie4.jpg" alt="View from a hot air balloon of other balloons" />
+                <figcaption><a href="#">#82</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/big2 - Copy.jpg" alt="a balloon fairground ride" />
+                <figcaption><a href="#">#81</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie5.jpg" alt="sunrise over a harbor" />
+                <figcaption><a href="#">#80</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto ex animi nisi a tempore in iusto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#79<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie6.jpg" alt="the Toronto light up sign at night" />
+                <figcaption><a href="#">#78</a></figcaption>
+            </figure>
+            <figure class="green">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta.</p>
+                </div>
+                <figcaption><a href="#">#77<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/big3 - Copy.jpg" alt="a river in the snow" />
+                <figcaption><a href="#">#76</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta Lorem ipsum dolor
+                        sit
+                        amet consectetur adipisicing elit. Culpa reiciendis assumenda nobis commodi saepe aspernatur..
+                    </p>
+                </div>
+                <figcaption><a href="#">#75<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <iframe src="https://www.youtube.com/embed/28CIeC8cZks" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <figcaption><a href="#">#74</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/big4 - Copy.jpg" alt="a hot air balloon shaped like a dog" />
+                <figcaption><a href="#">#73</a></figcaption>
+            </figure>
+            <figure class="green">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <figcaption><a href="#">#72<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie7.jpg" alt="View from a hot air balloon of other balloons" />
+                <figcaption><a href="#">#71</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie9.jpg" alt="a balloon fairground ride" />
+                <figcaption><a href="#">#70</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie10.jpg" alt="sunrise over a harbor" />
+                <figcaption><a href="#">#69</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto ex animi nisi a tempore in iusto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#68<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <iframe src="https://www.youtube.com/embed/SzO7oCMWJL8" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <figcaption><a href="#">#67</a></figcaption>
+            </figure>
+            <figure class="orange">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta.</p>
+                </div>
+                <figcaption><a href="#">#66<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie8.jpg" alt="a river in the snow" />
+                <figcaption><a href="#">#65</a></figcaption>
+            </figure>
+            <figure class="green">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta Lorem ipsum dolor
+                        sit
+                        amet consectetur adipisicing elit. Culpa reiciendis assumenda nobis commodi saepe aspernatur..
+                    </p>
+                </div>
+                <figcaption><a href="#">#64<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure class="yellow">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <figcaption><a href="#">#63<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <img src="Media/movie12.jpg" alt="a single checked balloon" />
+                <figcaption><a href="#">#62</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie11.jpg" alt="a hot air balloon shaped like a dog" />
+                <figcaption><a href="#">#61</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie15.jpg" alt="View from a hot air balloon of other balloons" />
+                <figcaption><a href="#">#60</a></figcaption>
+            </figure>
+            <figure class="orange">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto ex animi nisi a tempore in iusto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#59<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie13.jpg" alt="sunrise over a harbor" />
+                <figcaption><a href="#">#58</a></figcaption>
+            </figure>
+            <figure class="purple">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto ex animi nisi a tempore in iusto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#57<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie14.jpg" alt="the Toronto light up sign at night" />
+                <figcaption><a href="#">#56</a></figcaption>
+            </figure>
+            <figure class="green">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta.</p>
+                </div>
+                <figcaption><a href="#">#55<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie22.jpg" alt="a river in the snow" />
+                <figcaption><a href="#">#54</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta Lorem ipsum dolor
+                        sit
+                        amet consectetur adipi Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+                        doloremque est sapiente
+                    </p>
+                </div>
+                <figcaption><a href="#">#53<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure class="purple">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <figcaption><a href="#">#52<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <img src="Media/movie17.jpg" alt="a single checked balloon" />
+                <figcaption><a href="#">#51</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie18.jpg" alt="a hot air balloon shaped like a dog" />
+                <figcaption><a href="#">#50</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie16.jpg" alt="View from a hot air balloon of other balloons" />
+                <figcaption><a href="#">#49</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie19.jpg" alt="a balloon fairground ride" />
+                <figcaption><a href="#">#48</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie20.jpg" alt="sunrise over a harbor" />
+                <figcaption><a href="#">#47</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto ex animi nisi a tempore Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Placeat.in iusto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#46<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie21.jpg" alt="the Toronto light up sign at night" />
+                <figcaption><a href="#">#45</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta.</p>
+                </div>
+                <figcaption><a href="#">#44<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie25.jpg" alt="a river in the snow" />
+                <figcaption><a href="#">#43</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie31.jpg" alt="View from a hot air balloon of other balloons" />
+                <figcaption><a href="#">#42</a></figcaption>
+            </figure>
+            <figure class="purple">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta Lorem ipsum dolor
+                        sit
+                        amet consectetur adipisicing elit. Culpa reiciendis assumenda nobis commodi saepe aspernatur..
+                    </p>
+                </div>
+                <figcaption><a href="#">#41<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <figcaption><a href="#">#40<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <img src="Media/movie27.jpg" alt="a single checked balloon" />
+                <figcaption><a href="#">#39</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie29.jpg" alt="a hot air balloon shaped like a dog" />
+                <figcaption><a href="#">#38</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie28.jpg" alt="a balloon fairground ride" />
+                <figcaption><a href="#">#37</a></figcaption>
+            </figure>
+            <figure>
+                <iframe src="https://www.youtube.com/embed/CXs5Yq8gGng" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <figcaption><a href="#">#36</a></figcaption>
+            </figure>
+            <figure class="orange">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#35<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie30.jpg" alt="the Toronto light up sign at night" />
+                <figcaption><a href="#">#34</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <figcaption><a href="#">#33<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie32.jpg" alt="a river in the snow" />
+                <figcaption><a href="#">#32</a></figcaption>
+            </figure>
+            <figure class="green">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta Lorem ipsum dolor
+                        sit
+                        amet consectetur adipisicing elit. Culpa reiciendis assumenda nobis commodi saepe aspernatur..
+                    </p>
+                </div>
+                <figcaption><a href="#">#31<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <figcaption><a href="#">#30<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <img src="Media/movie33.jpg" alt="a single checked balloon" />
+                <figcaption><a href="#">#29</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie59.jpg" alt="a hot air balloon shaped like a dog" />
+                <figcaption><a href="#">#28</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie34.jpg" alt="View from a hot air balloon of other balloons" />
+                <figcaption><a href="#">#27</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie35.jpg" alt="a balloon fairground ride" />
+                <figcaption><a href="#">#26</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie36.jpg" alt="sunrise over a harbor" />
+                <figcaption><a href="#">#25</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto ex animi nisi a tempore in iusto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#24<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie37.jpg" alt="the Toronto light up sign at night" />
+                <figcaption><a href="#">#23</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta.</p>
+                </div>
+                <figcaption><a href="#">#22<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie38.jpg" alt="a river in the snow" />
+                <figcaption><a href="#">#21</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta Lorem ipsum dolor
+                        sit
+                        amet consectetur adipisicing elit. Culpa reiciendis assumenda nobis commodi saepe aspernatur..
+                    </p>
+                </div>
+                <figcaption><a href="#">#20<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure class="yellow">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <figcaption><a href="#">#19<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <img src="Media/movie40.jpg" alt="a single checked balloon" />
+                <figcaption><a href="#">#18</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie41.jpg" alt="a hot air balloon shaped like a dog" />
+                <figcaption><a href="#">#17</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie42.jpg" alt="View from a hot air balloon of other balloons" />
+                <figcaption><a href="#">#16</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie50.jpg" alt="" />
+                <figcaption><a href="#">#15</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie51.jpg" alt="" />
+                <figcaption><a href="#">#14</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto ex animi nisi a tempore in iusto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#13<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie52.jpg" alt="" />
+                <figcaption><a href="#">#12</a></figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique,Lorem ipsum, loremdolor sit amet consectetur adipisicing elit. Perspiciatis
+                        debitis id nam ipsam. tempore distinctio possimus, quis natus quo magni dicta.</p>
+                </div>
+                <figcaption><a href="#">#11<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <iframe src="https://www.youtube.com/embed/_b6jm4o8pT4" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <figcaption><a href="#">#10</a></figcaption>
+            </figure>
+            <figure class="yellow">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur consequatur id ab eum nobis
+                        provident similique, tempore distinctio possimus, quis natus quo magni dicta Lorem ipsum dolor
+                        sit
+                        amet consectetur adipisicing elit. Culpa reiciendis assumenda nobis commodi saepe aspernatur..
+                    </p>
+                </div>
+                <figcaption><a href="#">#9<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure class="pink">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <figcaption><a href="#">#8<span>Keep Read</span></a></figcaption>
+            </figure>
+
+            <figure>
+                <img src="Media/movie53.jpg" alt="" />
+                <figcaption><a href="#">#7</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie54.jpg" alt="" />
+                <figcaption><a href="#">#6</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie55.jpg" alt="" />
+                <figcaption><a href="#">#5</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie60.jpg" alt="" />
+                <figcaption><a href="#">#4</a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie56.jpg" alt="" />
+                <figcaption><a href="#">#3</a></figcaption>
+            </figure>
+            <figure class="pink">
+                <div>
+                    <h2>title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Veritatis, aut! Architecto ex animi nisi a tempore in iusto explicabo recusandae, sit vel. Iusto
+                        atque expedita illum. Deleniti ducimus minus enim!</p>
+                </div>
+                <figcaption><a href="#">#2<span>Keep Read</span></a></figcaption>
+            </figure>
+            <figure>
+                <img src="Media/movie58.jpg" alt="" />
+                <figcaption><a href="#">#1</a></figcaption>
+            </figure>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

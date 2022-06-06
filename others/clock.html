@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clock</title>
+  <style>
+    :root {
+      --second: 1s;
+      --minute: calc(var(--second) * 60);
+      --hour: calc(var(--minute) * 60);
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
+    body {
+      margin: 0 auto;
+    }
+
+    .container {
+      background-image: url(Media/clockbg.jpg);
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 70vw;
+      height: 100vh;
+      border: double 15px darkgray;
+    }
+
+    .clock {
+
+      --setTimeHour: 23;
+      --setTimeMinute: 23;
+      --timeShiftHour: calc(var(--setTimeHour) * var(--hour));
+      --timeShiftMinute: calc(var(--setTimeMinute) * var(--minute));
+      background-image: url(Media/clock.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: gray;
+      margin: 10% auto;
+      position: relative;
+      transform: rotate(180deg);
+      border: 3px black double;
+      box-shadow: 6px -12px 15px black;
+    }
+
+    .hand {
+      position: absolute;
+      top: 50%;
+      left: calc(50% - var(--width) / 2);
+      width: var(--width);
+      height: var(--height);
+      background-color: var(--color);
+      transform-origin: center 0;
+      border-radius: calc(var(--width) / 2);
+    }
+
+    .second.hand {
+      animation: rotate steps(60) var(--minute) infinite;
+    }
+
+    .minute.hand {
+      animation: rotate linear var(--hour) infinite;
+      animation-delay: calc(var(--timeShiftMinute) * -1);
+    }
+
+    .hour.hand {
+      animation: rotate linear calc(var(--hour) * 12) infinite;
+      animation-delay: calc((var(--timeShiftHour) + var(--timeShiftMinute)) * -1);
+
+    }
+
+    .second {
+      --width: 1px;
+      --height: 40px;
+      background-color: rgba(0, 0, 0, 0.338);
+      border: 1px solid black;
+    }
+
+    .minute {
+      --width: 2px;
+      --height: 30px;
+      background-color: rgb(0, 0, 0);
+      border: 1px solid black;
+    }
+
+    .hour {
+      --width: 2px;
+      --height: 20px;
+      background-color: rgb(0, 0, 0);
+      border: 1px solid black;
+    }
+
+    @media(max-width:550px) {
+        .container {
+        width: 100%;
+        height: 390px;
+        box-sizing: border-box;
+        background-size: 100% 100%;
+      }
+
+      .clock {
+      width: 50px;
+      height: 50px;
+      box-shadow: 3px -6px 8px black;
+      margin-top: 15%;
+
+
+      }
+
+      .second {
+      --width: 1px;
+      --height: 20px;
+        background-color: rgba(0, 0, 0, 0.338);
+        border: 1px solid black;
+      }
+
+      .minute {
+        --width: 1px;
+        --height: 15px;
+        background-color: rgb(0, 0, 0);
+        border: 1px solid black;
+      }
+
+      .hour {
+        --width: 1px;
+        --height: 10px;
+        background-color: rgb(0, 0, 0);
+        border: 1px solid black;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <div class="container">
+      <div class="clock">
+        <div class="second hand"></div>
+        <div class="minute hand"></div>
+        <div class="hour hand"></div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

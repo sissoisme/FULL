@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hover</title>
+  <style>
+    body {
+      background-color: #000000;
+    }
+
+    #first {
+      box-shadow: inset -600px 0 0 0 #ffffff;
+      border-radius: 50% 50% 50% 50%;
+      color: #ffffff;
+      text-shadow: 2px 2px 2px black;
+      padding: 30px;
+
+
+    }
+
+    #first:hover {
+      color: #fff;
+      
+      box-shadow: inset 600px 0 0 0 #000000;
+      transition: color 1s ease-in-out, box-shadow 2s ease-in-out, border 3s ease-in-out, text-shadow 4s ease-in-out;
+      border: 10px rgba(2, 255, 10, 0) solid;
+      text-shadow:
+        0 0 50px rgb(247, 247, 111),
+        0 0 33px rgb(247, 247, 111),
+        0 0 12px rgb(247, 247, 111);
+
+    }
+
+
+    #first {
+      color: #54b3d6;
+      font-family: 'Poppins', sans-serif;
+      font-size: 9em;
+      font-weight: 700;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+
+    body {
+      display: grid;
+      height: 100vh;
+      place-items: center;
+    }
+    @media(max-width:550px){
+      #first{width: 70%;
+        font-size: 5.5em;
+      }
+      
+    }
+  </style>
+
+
+</head>
+
+<body>
+</body>
+
+<a id="first" href="#">ENTER</a>
+
+</html>

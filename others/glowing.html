@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>glowing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            background-color: black;
+        }
+
+        nav {
+            width: 100vw;
+            margin-top: 250px;
+            height: 10vh;
+
+
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        li {
+            width: 20%;
+            float: left;
+            color: white;
+            font-size: 3em;
+            border: 3px white solid;
+            text-shadow:
+                0 0 9px white,
+                0 0 22px rgb(223, 242, 56),
+                0 0 35px rgb(255, 157, 0);
+        }
+
+        #box1 {
+            animation: flicker 2s infinite alternate;
+            animation-delay: 0.5s;
+        }
+
+        #box2 {
+            animation: flicker 2s infinite alternate;
+            animation-delay: 1s;
+        }
+
+        #box3 {
+            animation: flicker 2s infinite alternate;
+            animation-delay: 1.5s;
+        }
+
+        #box4 {
+            animation: flicker 2s infinite alternate;
+            animation-delay: 2s;
+        }
+
+        #box5 {
+            animation: flicker 2s infinite alternate;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes flicker {
+
+            0%{text-shadow: none;}
+            /* font-size:4em ;} */
+
+            100% {
+
+                text-shadow: 0 0 9px white,
+                    0 0 22px rgb(223, 242, 56),
+                    0 0 35px rgb(255, 157, 0);
+            }
+
+            25%,
+            50%,
+            75% {
+                text-shadow: 0 0 7px #fff,
+                    0 0 12px rgb(250, 4, 4),
+                    0 0 24px rgb(250, 4, 4),
+                    0 0 41px rgb(255, 255, 255),
+                    0 0 65px rgb(255, 255, 255),
+                    0 0 80px rgb(255, 255, 255);
+
+            }
+        }
+
+        @media(max-width:550px) {
+            nav {
+                text-align: center;
+                margin: 5%;
+                
+            }
+
+            ul{text-align: center;
+                margin: 0 auto;
+
+            }
+
+            li {
+                width: 95%;
+                font-size:2em;
+                margin: 0 auto;
+                
+
+                text-align: center;
+            }
+
+@keyframes flicker {
+
+            0%{text-shadow: none;
+            font-size:4em ;}
+
+            100% {
+
+                text-shadow: 0 0 9px white,
+                    0 0 22px rgb(223, 242, 56),
+                    0 0 35px rgb(255, 157, 0);
+            }
+
+            25%,
+            50%,
+            75% {
+                text-shadow: 0 0 7px #fff,
+                    0 0 12px rgb(250, 4, 4),
+                    0 0 24px rgb(250, 4, 4),
+                    0 0 41px rgb(255, 255, 255),
+                    0 0 65px rgb(255, 255, 255),
+                    0 0 80px rgb(255, 255, 255);
+
+            }
+        }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li id="box1">HOME</li>
+            <li id="box2">ABOUT</li>
+            <li id="box3">GALLERY</li>
+            <li id="box4">LINKS</li>
+            <li id="box5">CONTACT</li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

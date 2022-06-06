@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frame</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Black+Ops+One&family=Supermercado+One&family=Tapestry&display=swap');
+
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        div {
+            width: 90vw;
+            text-align: center;
+            position: relative;
+            background: #000;
+            border: 25px rgb(255, 255, 255) solid;
+            margin: 2vw;
+            margin-bottom: 5%;
+            height: 38vw;
+        }
+
+
+        div img {
+            mix-blend-mode: darken;
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 115%;
+            height: 125%;
+        }
+
+        div h1 {
+            margin: 0;
+            font-size: 18vw;
+            text-transform: uppercase;
+            font-family: Montserrat, sans-serif;
+            line-height: 1;
+            color: #fff;
+            letter-spacing: 12px;
+            font-family: 'Archivo Black', sans-serif;
+            padding-top: 20px;
+        }
+
+        #telaviv h1 {
+            font-family: 'Bangers', cursive;
+            font-weight: 900;
+            letter-spacing: 40px;
+        }
+
+        #paris h1 {
+            font-size: 26vw;
+            padding-top: 60px;
+        }
+
+        #tokyo h1 {
+            font-size: 22vw;
+            font-family: 'Black Ops One', cursive;
+            padding-top: 100px;
+            letter-spacing: 28px;
+        }
+
+        #roma h1 {
+
+            font-size: 26vw;
+            font-family: 'Tapestry', cursive;
+            ;
+            padding-top: 60px;
+            font-weight: 800;
+            letter-spacing: 6px;
+        }
+
+        @media(max-width:550px) {
+            div {
+                border: 10px white solid;
+                margin-bottom: 10%;
+            }
+
+            div img {
+
+                width: 125%;
+                height: 140%;
+            }
+
+            #newyork h1 {
+                padding-top: 0;
+            }
+
+            #telaviv h1 {
+                padding-top: 0;
+            }
+
+            #paris h1 {
+                font-size: 20vw;
+                padding-top: 30px;
+            }
+
+            #tokyo h1 {
+                font-size: 17vw;
+                padding-top: 30px;
+                padding-left: 10px;
+            }
+
+            #roma h1 {
+                font-size: 24vw;
+                padding-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="newyork">
+        <h1>NEW <br>YORK</h1><img src="Media/NY.jpg" alt="">
+    </div>
+    <div id="telaviv">
+        <h1>TEL<br> AVIV</h1><img src="Media/TA.jpg" alt="">
+    </div>
+    <div id="paris">
+        <h1>PARIS</h1><img src="Media/paris.jpg" alt="">
+    </div>
+    <div id="tokyo">
+        <h1>TOKYO</h1><img src="Media/tokyo.jpg" alt="">
+    </div>
+    <div id="roma">
+        <h1>ROMA</h1><img src="Media/roma.jpg" alt="">
+    </div>
+</body>
+
+</html>

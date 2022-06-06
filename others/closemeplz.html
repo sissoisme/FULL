@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try to close me !!</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-image: url(Media/error.png);
+            background-repeat: no-repeat;
+            margin-top: 100px;
+            width: 386px;
+            height: 180px;
+            position: relative;
+        }
+
+        .static {
+            background-image: url(Media/errorblank.png);
+            
+            background-repeat: no-repeat;
+            width: 70px;
+            height: 30px;
+            position: relative;
+            top:125px;
+            right:-131px;
+            opacity: 0;
+            
+        }
+
+        .hover {
+            background-image: url(Media/errorok.png);
+            background-repeat: no-repeat;
+            width: 66px;
+            height: 21px;
+            position: relative;
+            top: 99px;
+            right: 130px;
+            opacity: 0;
+        }
+        .static:hover{opacity: 1;}
+        .static:hover~div{opacity: 1;}
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="static"></div>
+        <div class="hover"></div>
+    </div>
+</body>
+
+</html>

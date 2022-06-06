@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>claver border</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: chartreuse;
+
+        }
+
+        .container {
+            margin: 5% auto;
+            width: 800px;
+            background-color: azure;
+            padding: 5%;
+            box-shadow: 4px 4px 12px black;
+            font-size: 1.5em;
+            text-align: center;
+            border-radius: max(0px, min(80px, calc((100vw - 100%) * 9999)));
+            transition: border-radius 0.1s ease-in-out ;
+        }
+        
+  
+
+  
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1><< תכווץ את הדף בכדי לראות >></h1>
+
+    </div>
+    <div class="container" style="width: 700px;">
+        <h1>ברגע שזה נוגע בגבול של הבלוק</h1>
+
+    </div>
+    <div class="container" style="width: 600px;">
+        <h1>הגבולות מתחברים </h1>
+
+    </div>
+
+</body>
+
+</html>
