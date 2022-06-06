@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQ.css">
+    <title>contactus</title>
+    <link rel='icon' type='image/x-icon' href='./../project/images/favicon/favicon.ico' />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script type="text/javascript">
+        
+        firebase.initializeApp({
+            projectId: "mywebsite890-6a0cb",
+        });
+
+        var db = firebase.firestore();
+
+        async function myFunction(e) {
+            console.log(e);
+            var nameElement = document.getElementById("name");
+            var emailElement = document.getElementById("email");
+            var phoneElement = document.getElementById("phone");
+            var subjectElement = document.getElementById("subject");
+            var textElement = document.getElementById("text");
+
+            alert("תודה רבה לך " + nameElement.value + ", פנייתך נשלחה לאתר (באמת) ותענה בהקדם");
+            console.log(nameElement.value, emailElement.value, phoneElement.value, subjectElement.value, textElement.value)
+            var res = await db.collection("contactus").add({
+                name: nameElement.value, email: emailElement.value, phone: phoneElement.value, subject: subjectElement.value, text: textElement.value, dateTime: new Date()
+            });
+
+            nameElement.value = ""
+            emailElement.value = ""
+            phoneElement.value = ""
+            // subjectElement.value = "" not recomended to clear
+            textElement.value = ""
+
+            console.log(res)
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="dropdown" >
+           <button class="dropbtn"></button>
+            <div class="dropdown-content" style="right:0;">
+                <a href="home.html">בית</a>
+                <a href="about.html">אודותינו</a>
+                <a href="fields.html">הכרמים שלנו</a>
+                <a href="wines.html">היינות שלנו</a>
+                <a href="visitcenter.html">מרכז המבקרים</a>
+                <a href="contactUs.html">צור קשר</a>
+            </div>
+        </div>
+        <div class="rightnav">
+            <a href="home.html">
+                <img src="images/icon.png" style="height:60px;float: right;"></a>
+            <a href="home.html">
+        </div>
+
+        <div class="centernav">
+            <a href="about.html">עלינו</a>|
+            <a href="fields.html">הכרמים שלנו</a>|
+            <a href="wines.html">היינות שלנו</a>|
+            <a href="visitcenter.html"> מרכז המבקרים שלנו</a>|
+            <a href="contactUs.html"> צור קשר</a>|
+        </div>
+
+        <div class="leftnav"">
+            <span>שפות:<br>
+            <a  class=" leftnavcolor" href=" eng/homeen.html">ENG </a>|
+            <a class="leftnavcolor" href="home.html">עברית</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="contactus-main">
+        <div class="contactus-box">
+            <div class="contactus-right">
+                <form action="http://localhost/myfirstphp/testindex.php" method="post" onsubmit= "return false" > 
+                    <label for="name">שם פרטי ושם משפחה:</label><br>
+                    <input id="name" name="userName" type="text"><br><br>
+
+                    <label for="phone">מספר טלפון:</label><br>
+                    <input id="phone" name="phone" type="text"><br><br>
+
+                    <label for="email">דואר אלקטרוני:</label><br>
+                    <input id="email" name="email" type="text"><br><br>
+
+                    <label for="subject">נושא:</label><br>
+                    <select id="subject" name="subject">
+                        <option value='web'>האתר שלנו</option>
+                        <option value='order'> הזמנות</option>
+                        <option value='visitcenter'> מרכז המבקרים</option>
+                        <option value='other'>אחר</option>
+                    </select><br><br>
+
+                    <label for="text">תוכן הפנייה:</label><br>
+                    <textarea id="text" name="context" cols="50" rows="6"></textarea><br>
+
+                    <input id="send" onclick="myFunction()" type="submit" value='שלח'><br>
+
+                </form>
+
+            </div>
+
+            <div class="contactus-left">
+                <h2>נשמח לעמוד לרשותכם בכל פנייה</h2>
+                <br>
+                <strong>שרות לקוחות : </strong><br>
+                <a class="contactus-links" href="tel:91700-555-123">1700-555-123</a><br>
+                <a class="contactus-links" href="mailto:shahafsisso2015">constwinery@biz.org</a><br>
+                <strong>בימים א' - ה' 08:00-17:00</strong><br><br>
+                <strong>מכירות:</strong><br>
+                <a class="contactus-links" href="tel:91700-555-123">1700-555-124</a><br>
+                <a class="contactus-links" href="mailto:shahafsisso2015">constwinerysales@biz.org</a><br>
+                <strong>בימים א' - ה' 08:30-16:00</strong><br>
+                <a href="./../feedback.html">
+                <input id="feedback"  type="submit" value='למשוב'></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fixed-footer">
+        <a href="home.html">בית</a>
+        <span class="footerPlaceHolder"></span>
+        <a href="about.html">אנחנו</a>
+        <span class="footerPlaceHolder"></span>
+        <a href="contactUs.html">צור קשר</a>
+        <p class="footerp">©2021,שחף סיסו, Inc. or its affiliates</p>
+    </div>
+</body>
+
+</html>

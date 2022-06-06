@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>MIXIN</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>תרחיב ותצר את הדף בכדי לראות </h1>
+        </header>
+        <main>
+            <div class="item1 item">
+                <h2>main.scss </h2>
+                <br>
+                @import "main"; <br>
+                @import "mixinMedia";
+
+
+            </div>
+            <div class="item2 item">
+                <h2>_mixinMedia.scss</h2>
+                <br>
+                @mixin desktop {<br>
+                @media(max-width: 1200px) {@content;}<br>
+                }<br><br>
+                @mixin tablet {<br>
+                @media(max-width: 800px) {@content;}<br>
+                }<br><br>
+                @mixin moblie {<br>
+                @media(max-width:600px) {@content;}<br>
+                }<br><br>
+            </div>
+
+            <div class="item3 item">
+                <pre><h2>_main.scss</h2><br>
+//NOT main.scss*
+<br>
+@import "mixinMedia";<br>
+main {<br>
+    Your Declarations... <br>
+    @include desktop {<br>
+        Your Declarations... }<br>
+    @include tablet {
+        Your Declarations... }<br>
+    @include moblie {
+        Your Declarations... }<br> 
+}
+            <br></pre></div>
+            <div class="item4 item">
+                <pre><h2>_main.scss</h2><br>
+@include desktop {
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'box1 box2 box3'
+        'box4 box5 box6';
+}</pre></div>
+
+            <div class="item5 item">
+                
+                <pre><h2>_main.scss</h2><br>
+@include tablet {
+    height: 150vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        'box1 box2'
+        'box3 box4'
+        'box5 box6';
+}</pre></div>
+            <div class="item6 item">
+                <pre><h2>_main.scss</h2><br>
+@include moblie {
+    height: 300vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6 1fr);
+    grid-template-areas:
+        'box1'
+        'box2'
+        'box3'
+        'box4'
+        'box5'
+        'box6';
+}</pre></div>
+        </main>
+        <footer>
+            <h1>תרחיב ותצר את הדף בכדי לראות </h1>
+        </footer>
+    </div>
+</body>
+
+</html>

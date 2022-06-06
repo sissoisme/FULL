@@ -1,0 +1,13 @@
+li a {
+    font-size: 5vh;
+    color: orange;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+li a:hover {
+    color: gray;
+    text-shadow: 1px 1px 1px blue;
+}

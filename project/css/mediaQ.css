@@ -1,0 +1,391 @@
+
+@media(min-width:768px)
+{
+
+
+    .dropbtn {display: none;}
+}
+
+
+@media(max-width:768px)
+{
+    /* nav *//* nav *//* nav *//* nav *//* nav *//* nav *//* nav *//* nav *//* nav *//* nav *//* nav */
+    #home{float: right;display: unset; height: 80px;}
+
+    .nav{height: 80px;background-color: white; }
+    
+    .centernav{
+        font-size: 18px;
+        padding-top: 10px;
+        width: 70%;
+        display: none;
+    }
+
+    .leftnav{
+        font-size: 8px;
+        width: 10%;
+        display: none;
+    }
+
+    .rightnav{width: 15%;display: none;}
+
+
+    .footer{width: 99.6%;}
+
+    /* home *//* home *//* home *//* home *//* home *//* home *//* home *//* home */
+
+    .home-container{
+        height: 650px;
+        
+    }
+
+    .home-carusel{
+        width: 100.5%;
+        padding-top: 80px;
+        position: sticky;
+    }
+
+    .home-carusel iframe{width:100%; height: 400px;position: sticky;}
+
+    /* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about */
+
+    .about-container{
+        width: 100.5%;
+        height: 3080px;
+    }
+
+    .about-top{
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        height: 680px;
+        float: none;
+    }
+
+    .about-topright{
+        width: 90%;
+        padding-top: 80px;
+        height: 250px;
+    }
+
+    .about-topleft{
+        width: 100%;
+        padding-top: 0;
+        height: 250px;
+        position: relative;
+        right:40px;
+        top:50px;
+    } 
+    
+    .about-middle{
+        width: 100%;
+        padding:0;
+        height: 1500px;
+    }
+
+    .about-profiles{
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        height: 500px;
+        border: none;
+
+    }
+
+    .about-profilesleft{
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .about-profilesright{
+        width: 80%;
+        padding-top: 30px;
+        margin: 0 auto;
+        font-size: 15px;
+        padding-right: 15px;
+    }
+
+    .about-bottom{
+        width: 100%;
+        margin: 0 auto;
+        height: 900px;
+    }
+
+    .about-warehouse{
+        width: 100%;
+        height: 350px;
+    }
+
+    .about-whframe{width: 90%;}
+
+    .about-whtitle{
+        width: 45%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .about-whimg{
+        width: 90%; 
+        height: 300px;
+    } 
+
+    .about-iframe{
+        width: 90%;
+        height: 250px;
+    }
+
+    .about-image{
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    /* field *//* field *//* field *//* field *//* field *//* field *//* field *//* field *//* field */
+
+    .Field-carousel{width: 100.5%;
+        padding-top: 80px;
+    }
+
+    .field-line{
+        width: 100%;
+        height: 200px;
+    }
+
+    .field-line-left{height: 200px;}
+
+    .field-line-right{height: 200px;}
+
+    .field-image{
+        width: 100%;
+        height: 250px;
+    }
+
+    .field-phara {
+        padding-top: 0px;
+        padding-right: 10px;
+        font-size: 8px;
+        width: 84%;
+    }
+
+    .field-head{
+        text-align: center;
+        padding-top: 0px;
+        padding-right: 15px;
+        font-size: 20px;
+    }
+/* wine *//* wine *//* wine *//* wine *//* wine *//* wine *//* wine */
+    .wine-head{
+        height: 120px;
+        width: 100%;
+    }
+
+    .wine-headimage{
+        width: 100%;
+        height: 120px;
+        margin-top: 80px;
+    }
+
+    .wine-upperbox{
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .wine-underbox{width: 100%;}
+
+    .wine-layer{
+        width: 100%;
+        height: 160px;
+
+    }
+
+    .wine-layerright{
+        width: 50%;
+        height: 160px;
+        float: right; 
+    }
+
+    .wine-layerleft{
+        width: 50%;
+        height: 160px;
+        float: left;
+    }
+
+    .fixed-footer{
+        height: 55px;
+        background: -webkit-linear-gradient(bottom, rgb(66, 66, 68) ,white, rgb(184, 195, 245));
+        text-align: center;
+        font-size: 26px;
+        text-decoration: underline;
+        padding-top: 25px;   
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        
+    }
+    .prod-main{width: 100%;}
+
+
+    
+
+    .prod-spaceholder{width: 100%;height: 80px;}
+
+
+    .prod-title{width: 100%;font-size: 24px;height: 50%;}
+
+
+    .prod-line{width: 100%;height: 235px;float: right;}
+
+
+    .prod-lineImg{width: 40%;height: 235px;}
+
+    .prod-image{ width:100%;}
+
+
+
+    .prod-linetext{width: 45%;font-size: 12px;height: 100px;padding-top: 15px;}
+
+
+    .prod-list{font-size: 10px;} 
+
+    
+/* visit *//* visit *//* visit *//* visit *//* visit *//* visit *//* visit *//* visit *//* visit */
+
+.visited-container{width: 100%;}
+
+.Carouselvisit{width: 100%;padding-top: 80px;}
+
+.visit-media{width: 100%;height: 730px;}
+
+
+.visit-video{width:100%;}
+
+.visit-iframe{width:99%; height: 220px;position: relative;right:0;top:-210px ;margin-top: 50px;}
+
+.visit-gallery{height: 250px;width: 99%;margin-bottom: 500px;}    
+ 
+.visit-image{width: 100%;margin-bottom: -4px;border-bottom:1px black solid ;}
+.visit-Map{width: 98%;}
+.visit-medialeft{width: 100%;}
+
+.visit-mediaright{width: 88%; font-size:14px;}
+
+.visit-mediahead{width: 100%; font-size: 20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+    /* conatctus *//* conatctus *//* conatctus *//* conatctus *//* conatctus *//* conatctus *//* conatctus */
+
+    .contactus-main {height: 580px;width: 100%;padding-top:-100px;margin-bottom: 50px;}
+
+    .contactus-box {height: 460px;width: 100%;position: relative;border: none;
+        top: 80px;}
+
+    .contactus-left {font-size: 12px;padding-top: 20px;width: 90%;height: 450px;}
+
+    .contactus-right {font-size: 12px;padding-top: 40px;height: 420px;width: 40%;}
+    .contactus-links{width: 70px;}
+    input{width: 60%;}
+    #text{width: 70%;}
+    #feedback{top:60px}
+    
+
+    .stickyfooter{
+        height: 55px;
+        background: -webkit-linear-gradient(bottom, rgb(66, 66, 68) ,white, rgb(184, 195, 245));
+        text-align: center;
+        font-size: 26px;
+        text-decoration: underline;
+        padding-right: 10px;
+        
+        position:sticky;
+        bottom: 0;
+        width: 99.1%;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* flash */
+
+
+
+
+
+
+    .container {
+        position: relative;
+        width: 50%;
+        background-color: rgb(255, 255, 255);
+        width: 80%;
+        height: 85%;
+        margin-top: 8%;
+        border: rgb(218, 193, 147) 6px solid;
+    }
+      
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+    
+    }
+      
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #008CBA;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+        opacity: 82%;
+        text-shadow: 2px 2px 5px black;
+        
+    
+    }
+    
+    .container:hover .overlay {height: 33%;}
+      
+    .text {
+        white-space: nowrap; 
+        color: white;
+        font-size: 22px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        
+    
+    }
+
+
+}
+
+
+

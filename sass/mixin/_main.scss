@@ -1,0 +1,46 @@
+@import "mixinMedia";
+
+main {
+    margin: 20vh 0;
+    width: 99vw;
+    background-color: goldenrod;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'box1 box2 box3'
+        'box4 box5 box6';
+
+    @include desktop {
+        height: 100vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            'box1 box2 box3'
+            'box4 box5 box6';
+    }
+
+    @include tablet {
+        height: 150vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            'box1 box2'
+            'box3 box4'
+            'box5 box6';
+    }
+
+    @include moblie {
+        height: 300vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6 1fr);
+        grid-template-areas:
+            'box1'
+            'box2'
+            'box3'
+            'box4'
+            'box5'
+            'box6';
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>VARS</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>VARIABELS, EXTEND & NESTING</h1>
+            <h2>SASS-דף דוגמה לשימוש בתכונות של</h2>
+            <p>בעזרת שימוש נכון בתכונות כמו VARIABLES , EXTEND & NESTING אפשר להגיע לתוצאות דומות במהירות ויעילות רבה
+                יותר.</p>
+        </div>
+        <article class="content">
+            <h2>1 - variables</h2>
+            <p><strong>.דוגמא לשימוש במשתנים בתרגיל: - עוזר במיוחד אם יש נתונים מבחוץ שנרצה לשלב</strong><br>
+                <br>
+                $globalSizeXXL:3.5em;<br>
+                font-size: $globalSizeXXL;<br><br>
+
+                $globalFontType: Verdana,<br>
+                font-family: $globalFontType; <br><br>
+
+            </p>
+        </article>
+        <article class="content">
+            <h2>2 - Extend</h2>
+            <p>
+                <strong>.דוגמא לשימוש בהרחבה בתרגיל: - עוזר במיוחד ליצור מבנים של עיצוב שלמים ולקרוא להם אחר כך</strong><br>
+                <br>
+                %headBox { <br>
+                width: 100%;<br>
+                height: 200px;<br>
+                text-align: center;<br>
+                background-color: deepskyblue;<br><br>
+                .header {
+                @extend%headBox
+                } <br>
+                
+
+            </p>
+
+
+        </article>
+        <article class="content">
+            <h2>3 - Nesting</h2>
+            <p>
+                <strong>.דוגמא לשימוש בקינון בתרגיל: -  עוזר במיוחד בכתיבה אחידה ומהירה של מבנה העמוד.</strong><br>
+                <br>
+                %headBox { <br>
+                width: 100%; <br>
+                height: 200px; <br>
+                text-align: center; <br>
+                background-color: deepskyblue; <br>
+                <br>
+                h1 { <br>
+                color: maroon; <br>
+                font-size: $globalSizeXXL; <br>
+                font-family: $globalFontType; <br>
+                text-shadow: 2px 2px 2px green;<br>
+<br>
+                <strong>.CSS</strong><br><br>
+                .header {<br>
+                    width: 100%;<br>
+                    height: 200px;<br>
+                    text-align: center;<br>
+                    background-color: deepskyblue;<br>
+                }<br><br>
+                  
+                  .header h1 {<br>
+                    color: navy;<br>
+                    font-size: 3.5em;<br>
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;<br>
+                    text-shadow: 2px 2px 2px green;<br>
+                  }<br>
+
+
+
+            </p> 
+                <br>
+        </article>
+        <div class="footer"><a href="">HOME </a>
+            <a href="">PRIVECY </a>
+            <a href="">CONTACT</a>
+        </div>
+    </div>
+</body>
+
+</html>

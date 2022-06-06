@@ -1,0 +1,94 @@
+.footer {
+  width: 100%;
+  height: 40px;
+  border: 2px solid gold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: darkgray;
+}
+
+.footer a {
+  font-size: 1.8em;
+  color: maroon;
+}
+
+.header {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  background-color: deepskyblue;
+}
+
+.header h1 {
+  color: navy;
+  font-size: 3.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px 2px green;
+}
+
+.header h2 {
+  color: magenta;
+  font-size: 1.8em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px 2px green;
+}
+
+.header p {
+  color: cornsilk;
+  text-shadow: 2px 2px 2px green;
+  font-size: 1.2em;
+  direction: rtl;
+}
+
+.content {
+  width: 80%;
+  height: 60vh;
+  background-color: bisque;
+  border: 1px solid pink;
+  border-radius: 35px;
+  margin: 20px auto;
+  overflow-y: scroll;
+}
+
+.content h2 {
+  text-shadow: 2px 2px 2px green;
+  color: orange;
+  font-size: 3.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px 2px green;
+  text-align-last: left;
+  padding-left: 20px;
+}
+
+.content p {
+  padding: 0 40px;
+  font-size: 1.8em;
+  text-align: left;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 550px) {
+  .content p {
+    font-size: 13px;
+  }
+  .header {
+    height: 350px;
+  }
+  .header h1 {
+    font-size: 1.8em;
+  }
+  .content h2 {
+    font-size: 2em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
