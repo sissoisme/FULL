@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID one way</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: blue;
+            width: 100vw;
+            text-align: center;
+            font-size: 2em;
+
+        }
+
+        .container {
+            display: grid;
+            background-color: #2196F3;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 1fr 5fr 1fr;
+            gap: 10px;
+            height: 100vh;
+        }
+
+        header {
+            background-color: rgb(52, 3, 58);
+        }
+
+        .main {
+            background-color: #2196F3;
+            display: grid;
+            grid-template-columns: 80% 15%;
+            grid-template-rows: 1fr;
+            gap: 10px;
+        }
+
+        footer {
+            background-color: blue;
+        }
+
+        aside {
+            background-color: rgb(108, 3, 9);
+        }
+
+        .center {
+            background-color: #2196F3;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 8fr;
+            gap: 15px;
+        }
+
+        .box {
+            background-color: blue;
+        }
+
+        .items {
+            background-color: #2196F3;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 20px;
+        }
+
+        .item {
+            background-color: blue;
+        }
+
+        @media(max-width:550px) {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>header</header>
+        <div class="main">
+            <div class="center">
+                <div class="items">
+                    <div class="item1 item">1</div>
+                    <div class="item2 item">2</div>
+                    <div class="item3 item">3</div>
+                </div>
+                <div class="box">box</div>
+            </div>
+            <aside>aside</aside>
+        </div>
+        <footer>footer</footer>
+
+    </div>
+
+</body>
+
+</html>

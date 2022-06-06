@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>HOME WORK 10-04 Attribute Selectors</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+
+        }
+
+        section {
+
+            width: 100vw;
+
+        }
+
+        .side {
+            background-image: url(media/side.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: right;
+            width: 14.8vw;
+
+
+
+        }
+
+        .main {
+            width: 100vw;
+            float: left;
+            background-image: url(media/cinima.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        img[src^="media/big"] {
+            display: none;
+            position: absolute;
+            width: 65.5vw;
+            height: 37vw;
+            top: 2.5vw;
+            left: 15.8vw;
+            z-index: 3;
+        }
+
+        img[src^="media/small"] {
+            width: 58%;
+            height: 60%;
+            position: relative;
+            top: 8%;
+            right: -16%;
+            margin-bottom: 10px;
+            margin-top: 0px;
+            border: 1px white solid;
+
+
+        }
+
+        img:hover[src^="media/small"]+img[src^="media/big"] {
+            display: block;
+        }
+
+        img[src^="media/movies"] {
+            display: block;
+            position: absolute;
+            width: 65.5vw;
+            height: 37vw;
+            top: 2.5vw;
+            left: 15.8vw;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+
+        <div class="side">
+            <img src="media/small1.jpg">
+            <img src="media/small2.jpg">
+            <img src="media/big1.jpg">
+            <img src="media/big2.jpg">
+            <img src="media/small3.jpg">
+            <img src="media/big3.jpg">
+            <img src="media/small4.jpg">
+            <img src="media/big4.jpg">
+            <img src="media/movies.jpg">
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

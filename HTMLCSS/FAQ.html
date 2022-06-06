@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FAQ</title>
+    <style>
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 auto;
+            width: 60%;
+            text-align: left;
+
+
+        }
+
+        .container {
+            background-color: rgba(161, 161, 161, 0.196);
+            border: 2px black solid;
+
+        }
+
+        #title {
+            text-align: center;
+            font-size: 50px;
+
+            background-color: rgb(227, 210, 166);
+            border-bottom: 3px black solid;
+        }
+
+        #title h2 {
+            font-size: 22px;
+            color: yellow;
+            text-shadow: -1px -0 black, 0 1px black, 1px 0 black, 0 -2px black;
+        }
+
+        .line {
+            height: 350px;
+            border: 1px solid black;
+            color: rgb(25, 25, 31);
+            font-size: 26px;
+            word-break:keep-all
+
+        }
+
+        .question {
+            list-style-type: none;
+            font-size: 32PX;
+            padding: 20px 50px;
+            
+
+
+        }
+
+        .question::first-letter {
+            font-size: 200%;
+            color: #8A2BE2;
+        }
+
+        .answer::first-letter {
+            font-size: 250%;
+            color: #8e0404;
+        }
+
+
+        .answer {
+            list-style-type: none;
+            font-size: 22PX;
+            padding: 0px 50px;
+
+        }
+
+        ul li.answer {
+            display: none;
+        }
+
+        ul li.question:hover~li {
+            display: inline-block;
+        }
+        @media (max-width:550px) {
+            li {text-align: center !important;
+                padding-left: 20px !important;
+                font-size: 15px !important;
+            }
+             #title h2{font-size: 18px;}
+        }
+    </style>
+</head>
+<!-- div.container>(div#title>h1{title})+div.main>(div.line{line $}>ul>li.question{question #$}+li.answer{answer #$})*7 -->
+
+<body>
+    <div class="container">
+        <div id="title">
+            <h1>FAQ</h1>
+            <h2>MOVE YOUR MOUSE OVER THE QUESIONS FOR ANSWERS</h2>
+        </div>
+        <div class="main">
+            <div class="line">
+                <ul>
+                    <li class="question">Q -WHAT IS WORDPREES?</li>
+                    <li class="answer">A - WORDPRESS IS A FREE FORMAT FOR BULDING AND MANAGING WEBSITES</li>
+                </ul>
+            </div>
+            <div class="line">
+                <ul>
+                    <li class="question">Q - IT IS FREE?</li>
+                    <li class="answer">A - YES!, THE BASIC PACKAGE IS TOTALY FREE. </li>
+                </ul>
+            </div>
+            <div class="line">
+                <ul>
+                    <li class="question">Q - CAN EVERY BODY USE IT? </li>
+                    <li class="answer">A - YES! IF THEY WANT,BUT NOT EVERYBODY WILL ACTUALY GET RESULT WITHOUT USING OUR
+                        PRIMIUM PACKAGE AND THE ONLINE COURS</li>
+                </ul>
+            </div>
+            <div class="line">
+                <ul>
+                    <li class="question">Q -WHAT IS THE PRIMIUM PACKAGE?</li>
+                    <li class="answer">A - YOU PAY 49$ PER MONTH AND YOU GET ALL THE BLOCKS AND THEME YOU NEED.</li>
+                </ul>
+            </div>
+            <div class="line">
+                <ul>
+                    <li class="question">Q - CAN I MAKE A STORE SITE?</li>
+                    <li class="answer">A - YES, WITH ECOMMER ,FOR ANOTHER 89$ PER MONTH YOU CAN MANAGE ALL THE STORE
+                        PART AND BECOME REAL SOMEONE IMPORTANT </li>
+                </ul>
+            </div>
+            <div class="line">
+                <ul>
+                    <li class="question">Q - SO AFTER I GOT THE PRIMIUM PACKAGE AND ECOMMER. I AM GOOD TO GO?</li>
+                    <li class="answer">A - NO. YOU STILL NEED ELEMENTOR PRO , WPFORM, THEME SELECTOR, SCO-MANAGMENT, POPUPS/TEMPLATS/WIDIX PACKAGES TO BUY FOR ONLY 379$ PER MONTH AND YOU ARE GOOD TO GO.
+                    </li>
+                </ul>
+            </div>
+            <div class="line">
+                <ul>
+                    <li class="question">Q - SO THIS IS WORTH IT?</li>
+                    <li class="answer">A - NO!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ2</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: blue;
+            width: 100%;
+            height: 1900px;
+            text-align: left;
+
+
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 70px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            word-spacing: 10px;
+            padding-right: 20px;
+
+            color: yellow;
+            text-shadow: -1px -0 black, 0 1px black, 1px 0 black, 0 -2px black;
+        }
+
+        .header {
+            width: 60%;
+            background: -webkit-linear-gradient(bottom, rgb(70, 215, 70), rgb(95, 95, 228));
+            margin-bottom: 30px;
+            border: 1px gray solid;
+            border-radius: 0 0 33px 33px;
+            box-shadow: 4px 6px 10px 2px;
+            ;
+        }
+
+
+        .main {
+            width: 60%;
+        }
+
+
+
+        .line {
+            border: 1px solid black;
+            background-color: green;
+            height: 300px;
+            margin-bottom: 20px;
+            border-radius: 33px;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 42px;
+            box-shadow: 4px 6px 10px 2px;
+        }
+
+        .left {
+            width: 50%;
+            height: 100%;
+            float: left;
+            border-right: 1px black solid;
+            background-color:green;
+            padding: 40px 15px;
+            border-radius: 33px 0px 0px 33px;
+            line-height: 2;
+            ;
+
+        }
+
+
+
+        .qu {
+            padding: 10%;
+            font-size: 55px;
+        }
+
+        .ans {
+            display: none;
+            position: relative;
+            right: -400px;
+            top: -110px;
+            font-size: 55px;
+            text-align: center;
+        }
+
+
+        div.line div.left span.qu:hover~span {
+            display: block
+        }
+
+        @media (max-width:550px) {
+            .main {
+                width: 90vw;
+                
+            }
+
+            .line {
+                display: flex;
+                
+
+            }
+            h2{font-size: 20px;}
+
+            .left {
+                border: none;
+                margin: 0;
+                width: 90%;
+                
+            }
+
+            .right {
+                display: none;
+            }
+            .qu{font-size: 45px;}
+
+            .ans {
+                display: none;
+                position: relative;
+                top:0px;
+                left:0px;
+                text-align: center;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>FAQ </h1>
+            <h2> MOVE YOUR MOUSE OVER THE QUESIONS FOR ANSWERS</h2>
+        </div>
+        <div class="main">
+            <div class="line">
+                <div class="left">
+                    <span class="qu">2X2=?</span>
+                    <span class="ans">4!</span>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="line">
+                <div class="left">
+                    <span class="qu">24-19=?</span>
+                    <span class="ans">5!</span>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="line">
+                <div class="left">
+                    <span class="qu">3+3X3=?</span>
+                    <span class="ans">12!</span>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="line">
+                <div class="left">
+                    <span class="qu">52/4+5=?</span>
+                    <span class="ans">18!</span>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="line">
+                <div class="left">
+                    <span class="qu">11X8+3=?</span>
+                    <span class="ans">91!</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

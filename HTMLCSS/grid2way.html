@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid2way</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: box1;
+        }
+
+        .item3 {
+            grid-area: box2;
+        }
+
+        .item4 {
+            grid-area: box3;
+        }
+
+        .item5 {
+            grid-area: aside;
+        }
+
+        .item6 {
+            grid-area: main;
+        }
+
+        .item7 {
+            grid-area: footer;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) 15vw;
+            grid-template-rows: 1fr 1.5fr 4fr 1fr;
+            grid-template-areas:
+
+                'header header header header '
+                'box1 box2 box3 aside'
+                'main main main aside'
+                'footer footer footer footer';
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .container>div {
+            background-color: blue;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        @media(max-width:550px) {
+            .container {
+                height: 100vh;
+                width: 100vw;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">header</div>
+        <div class="item2">box1</div>
+        <div class="item3">box2</div>
+        <div class="item4">box3</div>
+        <div class="item5">aside</div>
+        <div class="item6">main</div>
+        <div class="item7">Footer</div>
+    </div>
+</body>
+
+</html>

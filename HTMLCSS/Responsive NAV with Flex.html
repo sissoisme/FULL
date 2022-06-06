@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive NAV with Flex</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: rgb(163, 163, 221);
+            width: 100vw;
+            height: 40px;
+
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            font-size: 2em;
+            background-color: rgb(210, 210, 235);
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: white;
+            text-shadow: black 2px 2px 2px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 3em;
+            line-height: 0.8;
+            font-weight: 700;
+
+        }
+
+        @media (max-width:550px) {
+            ul {
+                display: none;
+                line-height: 1.6;
+                background: rgb(28, 28, 65);
+               
+                
+            }
+            li a{color: white}
+            
+
+            
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger:hover+ul {
+                display: flex;
+                flex-direction: column;
+               
+                
+            }
+            
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="hamburger"><a href="">≡</a></div>
+            <ul>
+
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">VIDEOS</a></li>
+                <li><a href="">GALLERY</a></li>
+                <li><a href="">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+
+</html>

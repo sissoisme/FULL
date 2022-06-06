@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: lightskyblue;
+            width: 60%;
+            height: 800px;
+            margin-top: 100px;
+        }
+
+        .line, .line1 {
+            border: 2px solid black;
+            margin-top: 10PX;
+            height: 100px;
+            padding: 3% 20%;
+            text-align: center;
+
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        h1 {
+            font-size: 44px;
+        }
+
+        .line1:hover, .line1:hover{
+            color: white;
+            text-shadow: black 2px 2px;
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="line1">
+            <h1>ISRAEL</h1>
+        </div>
+        <div class="line1">
+            <h1>FRANCE</h1>
+        </div>
+        <div class="line orange" onmouseover="myFunction1(this)" 
+        onmouseout="myFunction2(this)">
+            <h1 class="js">ISRAEL</h1>
+        </div>
+        <div class="line orange" onmouseover="myFunction1(this)"
+        onmouseout="myFunction2(this)">
+            <h1 class="js">FRANCE</h1>
+        </div>
+
+    </div>
+   <script>
+        function myFunction1 () {
+            document.getElementsByClassName("js")[0].style.color ="white";
+            document.getElementsByClassName("js")[0].style.textShadow ="2px 2px black";
+            document.getElementsByClassName("js")[1].style.color ="white";
+            document.getElementsByClassName("js")[1].style.textShadow ="2px 2px black";
+    
+        
+        }
+        function myFunction2 (){
+            document.getElementsByClassName("js")[0].style.color ="black";
+            document.getElementsByClassName("js")[0].style.textShadow ="none";
+            document.getElementsByClassName("js")[1].style.color ="black";
+            document.getElementsByClassName("js")[1].style.textShadow ="none";
+        }
+    </script>
+</body>
+
+</html>
