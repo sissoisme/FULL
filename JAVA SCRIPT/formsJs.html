@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+        }
+
+        body {
+            display: grid;
+        }
+
+        div {
+            border: 2px solid black;
+            width: 20vw;
+            height: 20vh;
+            display: grid;
+            justify-self: center;
+            position: absolute;
+            top: 25vh;
+            text-align: center;
+
+        }
+
+        form {
+            justify-self: center;
+            align-self: center;
+        }
+
+        input {
+            width: 10vw;
+        }
+
+        @media(max-width:550px) {
+            div {
+                width: 50vw;
+                height: 40vh;
+            }
+
+            input {
+                width: 30vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div name="box">
+        <form name="enter">
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstNameinput" id="firstName">
+            <br><br>
+            <label for="LastName">Last Name:</label>
+            <input type="text" name="lastNameinput">
+            <br><br>
+            <input type="submit" name="CLICK ME" onclick=" sayHello()">
+        </form>
+    </div>
+</body>
+<script>
+    function sayHello() {
+        var firstName = document.enter.firstNameinput.value;
+        var lastName = document.enter.lastNameinput.value;
+        window.document.write("Hello There : " + '<span id="firstName" style="color:blue;font-size:1.5em">' +
+            firstName + " " + '</span>' + '<span style="color:green;font-size:2.5em">' + lastName + '</span>');
+
+
+    }
+</script>
+
+</html>

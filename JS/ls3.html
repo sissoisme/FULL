@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSON 3</title>
+    <style>
+        *{margin: 0 auto;
+        padding: 0;}
+        @media (max-width:550px)
+        {
+            #bottom{display: none;}
+            h1{display: none;}
+        }
+        span {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #main {
+            background-color: rgb(255, 255, 255);
+            width: 100vw;
+            height: 600px;
+            float: left;
+            text-align: center;
+            
+        }
+
+        #color {
+            background-color: blue;
+            margin: 0 auto;
+            width: 400px;
+            height: 300px;
+
+        }
+
+        #up {
+            background-color: purple;
+            height: 150px;
+            width: 100%;
+        }
+
+        #down {
+            background-color: purple;
+            height: 150px;
+            width: 100%;
+           
+        }
+
+        #red {
+            background-color: red;
+            height: 100px;
+            float: right;
+            width: 50%;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #blue {
+            background-color: blue;
+            height: 100px;
+            float: left;
+            width: 50%;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #yellow {
+            background-color: yellow;
+            height: 100px;
+            float: right;
+            width: 50%;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #green {
+            background-color: green;
+            height: 100px;
+            float: left;
+            width: 50%;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #bottom {
+            background-color: brown;
+            margin-top: 200px;
+            height: 200px;
+            width: 100vw;
+
+
+
+        }
+
+        #circle1 {
+            width: 200px;
+            height: 200px;
+            background-color: darkgrey;
+            border-radius: 100%;
+            float: right;
+        }
+
+        #innerCircle1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            float: left;
+            background-color: blue;
+            position: relative;
+            top: 25%;
+            left: 25%;
+        }
+
+        #demo {
+            width: 300px;
+            height: 200px;
+            background-color: darkgrey;
+            margin: 0 auto;
+
+        }
+
+        #circle2 {
+            width: 200px;
+            height: 200px;
+            background-color: darkgrey;
+            border-radius: 100%;
+            float: left;
+
+        }
+
+        #innerCircle2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            float: left;
+            background-color: blue;
+            position: relative;
+            top: 25%;
+            left: 25%;
+        }
+
+        #demo {
+            font-size: 40px;
+            text-align: center;
+            width: 40vh;
+
+        }
+        h1{text-align: center;}
+    </style>
+</head>
+
+<body><div>
+        <h1>the left circle is without the stopPropagation() method </h1>
+        <br><br>
+    </div>
+    <div id="main">
+        <div id="color">
+            <div id="up">
+                <div id="red"><span>red</span></div>
+                <div id="blue"><span>blue</span></div>
+            </div>
+            <div id="down">
+                <div id="yellow"><span>yellow</span></div>
+                <div id="green"><span>green</span></div>
+            </div>
+        </div>            <div>
+                <p id="demo">Open the console to see results</p>
+
+            </div>
+        <div id="bottom">
+            <div id="circle1"><span style="position: relative; top:10px;left:-30px;">Israel</span>
+                <div id="innerCircle1"><span style="position: relative; top:30px;left:10px; font-size: 25px;">Tel
+                        aviv</span>
+
+                </div>
+            </div>
+            <div id="circle2"><span style="position: relative; top:10px;left:-30px;">Israel</span>
+                <div id="innerCircle2"><span style="position: relative; top:30px;left:10px; font-size: 25px;">Tel
+                        aviv</span>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+
+
+    <script>
+        var red = document.getElementById('red');
+        red.onclick = function () {
+            var content = red.innerText;
+            console.log(content);
+            document.getElementById('demo').style.color = 'red';
+        }
+        var blue = document.getElementById('blue');
+        blue.onclick = function () {
+            var content = blue.innerText;
+            console.log(content);
+            document.getElementById('demo').style.color = 'blue';
+        }
+        var yellow = document.getElementById('yellow');
+        yellow.onclick = function () {
+            var content = yellow.innerText;
+            console.log(content);
+            document.getElementById('demo').style.color = 'yellow';
+        }
+        var green = document.getElementById('green');
+        green.onclick = function () {
+            var content = green.innerText;
+            console.log(content);
+            document.getElementById('demo').style.color = 'green';
+        }
+
+        var circle2 = document.getElementById('circle2');
+        var innerCircle2 = document.getElementById('innerCircle2');
+        function wellcome_to_israel2() {
+            console.log("Wellcome to Israel");
+        }
+
+        function wellcome_to_tel_aviv2() {
+            console.log("Wellcome to Tel aviv");
+
+        }
+
+        var circle1 = document.getElementById('circle1');
+        var innerCircle1 = document.getElementById('innerCircle1');
+        function wellcome_to_israel() {
+            console.log("Wellcome to Israel");
+        }
+
+        function wellcome_to_tel_aviv() {
+            console.log("Wellcome to Tel aviv");
+            event.stopPropagation();
+        }
+
+        circle1.addEventListener('click', wellcome_to_israel, false);
+        innerCircle1.addEventListener('click', wellcome_to_tel_aviv, false);
+        circle2.addEventListener('click', wellcome_to_israel2, false);
+        innerCircle2.addEventListener('click', wellcome_to_tel_aviv2, false);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSON 2</title>
+    <style>
+        .head {
+            margin: 0 auto;
+            width: 50%;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        #list {
+            width: 80%;
+            background-color: rgb(57, 145, 145);
+        }
+        #pTags {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 200px;
+            color:blue ;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="head">
+        <button type="button" onclick="myFunction1()">ADD ITEM</button>
+        <button type="button" onclick="myFunction2()">DELETE ITEM</button>
+        <br>
+        <button type="button" onclick="myFunction3()">create new P tag in bottom</button>
+        <button type="button" onclick="myFunction4()">create new span tag in bottom</button>
+    </div>
+    <div>
+        <ol id="list">
+            <li>item number 1</li>
+            <li>item number 2</li>
+            <li>item number 3</li>
+            <li>item number 4</li>
+            <li>item number 5</li>
+            <li>item number 6</li>
+        </ol>
+        <div id="pTags">
+
+
+        </div>
+    </div>
+    <script>
+        function myFunction1() {
+           var li = document.createElement('li');
+           li.innerText = 'new item';
+           document.getElementById('list').appendChild(li);
+        }
+
+        function myFunction2() {
+            var ol = document.getElementById('list');
+            ol.removeChild(ol.lastElementChild);
+
+            document.getElementById('list').removeChild(ol);
+            
+        }
+
+        function myFunction3() {
+           var p = document.createElement('p');
+           p.innerText = 'new p tag';
+           document.getElementById('pTags').appendChild(p);
+
+        }
+        function myFunction4() {
+           var span = document.createElement('span');
+           span.innerText = 'new span tag';
+           document.getElementById('pTags').appendChild(span);
+
+        }
+    </script>
+</body>
+
+</html>

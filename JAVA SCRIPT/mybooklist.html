@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mybooklist</title>
+    <style>
+        *{margin: 0;
+        padding: 0;
+    box-sizing: border-box;}
+        form {
+            width: 200px;
+            border: 2px rgba(49, 154, 23, 0.689) solid;
+            text-align: center;
+            padding: 12px;
+            margin: 20px auto;
+            box-shadow: -5px -4px 5px 1px black;
+            background-color: lavender;
+        }form input{ border: 2px mediumblue solid;}
+
+        table {
+            width: 100vw;box-shadow: -5px -4px 5px 1px black;
+            background-color: goldenrod;
+        }
+
+        section {
+            height: 80vh;
+            background-color: rgb(58, 48, 48);
+            margin-top: 20px;
+        }
+        td:nth-of-type(8n),
+        td:nth-of-type(8n-1),
+        td:nth-of-type(8n-2),
+        td:nth-of-type(8n-3)
+
+        {
+            background-color: rgb(249, 182, 210);
+            border: 2px rgb(91, 11, 86) solid ;
+        }
+
+        table,
+        th,
+        td,
+        tr {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 2px black solid;
+            background-color: honeydew;
+            border-radius: 10px;
+            height: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.2em;
+        }
+
+        .trList {
+            width: 100vw;
+            background-color: chocolate;
+        }
+
+        td,
+        th {
+            padding-left: 5px;
+
+        }
+
+        th {
+            border: 2px rgb(91, 11, 86) solid ;
+            background-color: skyblue;
+            border-radius: 10px;
+            height: 2.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.2em;
+        }
+
+        .width10 {
+            width: 10%;
+        }
+
+        .width20 {
+            width: 20%;
+        }
+
+        .width30 {
+            width: 30%;
+        }
+
+        .width40 {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <lable for="name">BOOK Name:</lable><br>
+        <input type="text" name="name" id="bName"><br><br>
+        <lable for="author">Author:</lable><br>
+        <input type="text" name="author" id="author"><br><br>
+        <lable for="isbn">ISBN Number:s</lable><br>
+        <input type="text" name="isbn" id="isbn"><br><br>
+        <input type="button" value="Add book" id="btn">
+    </form>
+    <section id="list">
+        <table id="bookList">
+            <tr>
+                <th class="width10">S. Number</th>
+                <th class="width40">BOOK NAME</th>
+                <th class="width30">AUTHOR</th>
+                <th class="width20">ISBN</th>
+            </tr>
+        </table>
+    </section>
+    <script>
+        let sNumber = 1;
+        document.getElementById('btn').addEventListener('click', function () {
+            let bookName = document.getElementById('bName').value;
+            let author = document.getElementById('author').value;
+            let isbn = document.getElementById('isbn').value;
+            const newRow = document.createElement('tr');
+            newRow.id = 'trList';
+            document.getElementById('bookList').appendChild(newRow);
+            let tdSN = document.createElement('td');
+            tdSN.innerText = sNumber;
+            tdSN.className = 'width10';
+            document.getElementById('bookList').appendChild(tdSN)
+            let tdBookName = document.createElement('td');
+            tdBookName.innerText = bookName
+            tdBookName.className = 'width40';
+            document.getElementById('bookList').appendChild(tdBookName)
+            let tdAuthor = document.createElement('td');
+            tdAuthor.innerText = author;
+            tdAuthor.className = 'width30';
+            document.getElementById('bookList').appendChild(tdAuthor)
+            let tdIsbn = document.createElement('td');
+            tdIsbn.innerText = isbn
+            tdIsbn.className = 'width20';
+            document.getElementById('bookList').appendChild(tdIsbn);
+
+
+
+
+
+            sNumber++
+        })
+    </script>
+</body>
+
+</html>

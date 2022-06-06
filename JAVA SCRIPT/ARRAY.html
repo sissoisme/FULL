@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arry</title>
+    <style>
+        div {
+            width: 50%;
+            margin: 1rem auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .item {
+
+            
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+            box-shadow: 0 0 0 5px;
+            margin: 30px;
+        }
+
+        #bigBasket {
+            width: 90vw;
+            height: 700px;
+            background-image: url(media/basket.jpg) ;
+            background-size: cover;
+        }
+
+        .basket {
+            width: 90vw;
+            height: 500px;
+            display: block;
+            padding: 100px;
+
+
+        }
+
+        .icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+            box-shadow: 0 0 0 5px;
+            margin: 30px;
+            border: 5px purple double;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #text {
+            width: 75vw;
+            border: 2px black solid;
+            margin: 0 auto;
+            height: 8vh;
+            font-size: 2rem;
+
+        }
+        section{display: flex;
+        justify-content: center;}
+        h5{text-align: center;}
+    </style>
+</head>
+
+<body>
+    <div id="text"> </div>
+    <section>
+        <div> <button id="clearDup">insert & clear duplicate</button></div>
+        <h5>click on the icons to add friuts to the basket. after that,  insert them  to the arry - it will Remove Duplicate fruits in your array .if you have any of that icon  type in your array the icon become green. outherwise it will be red  </h5>
+        <div> <a href=""><button href="#">refrash</button></a></div>
+    </section>
+    <div>
+        <div class="icon" id="appleBg"><img class="item" id="apple" src="media/apple.png" alt=""></div>
+        <div class="icon" id="bananaBg"><img class="item" id="banana" src="media/banana.png" alt=""></div>
+        <div class="icon" id="strawbarreyBg"><img class="item" id="strawbarrey" src="media/strawberrey.png" alt=""></div>
+        <div class="icon" id="mangoBg"><img class="item" id="mango" src="media/mango.png" alt=""></div>
+    </div>
+
+
+
+    <div id="bigBasket">
+        <div id="basket" class="basket"></div>
+    </div>
+
+
+
+
+    <script>
+        let originalFruits = [];
+        console.log(originalFruits);
+
+        document.getElementById('apple').addEventListener('click', function () {
+            const newItem = document.createElement('img');
+            newItem.src = "media/apple.png";
+            newItem.id = "newApple";
+            newItem.className = "item";
+            document.getElementById('basket').appendChild(newItem);
+            originalFruits.push("apple");
+            console.log(originalFruits);
+            if (originalFruits.length == 18) {
+                document.getElementById('apple').style.visibility = 'hidden';
+                document.getElementById('banana').style.visibility = 'hidden';
+                document.getElementById('strawbarrey').style.visibility = 'hidden';
+                document.getElementById('mango').style.visibility = 'hidden';
+            }
+
+        });
+        document.getElementById('banana').addEventListener('click', function () {
+            const newItem = document.createElement('img');
+            newItem.src = "media/banana.png";
+            newItem.id = "newBanana";
+            newItem.className = "item";
+            document.getElementById('basket').appendChild(newItem);
+            originalFruits.push("banana");
+            console.log(originalFruits);
+            if (originalFruits.length == 18) {
+                document.getElementById('apple').style.visibility = 'hidden';
+                document.getElementById('banana').style.visibility = 'hidden';
+                document.getElementById('strawbarrey').style.visibility = 'hidden';
+                document.getElementById('mango').style.visibility = 'hidden';
+            }
+        });
+        document.getElementById('strawbarrey').addEventListener('click', function () {
+            const newItem = document.createElement('img');
+            newItem.src = "media/strawberrey.png";
+            newItem.id = "newStrawberrey";
+            newItem.className = "item";
+            document.getElementById('basket').appendChild(newItem);
+            originalFruits.push("strawbarrey");
+            console.log(originalFruits);
+            if (originalFruits.length == 18) {
+                document.getElementById('apple').style.visibility = 'hidden';
+                document.getElementById('banana').style.visibility = 'hidden';
+                document.getElementById('strawbarrey').style.visibility = 'hidden';
+                document.getElementById('mango').style.visibility = 'hidden';
+            }
+        });
+        document.getElementById('mango').addEventListener('click', function () {
+            const newItem = document.createElement('img');
+            newItem.src = "media/mango.png";
+            newItem.id = "newMango";
+            newItem.className = "item";
+            document.getElementById('basket').appendChild(newItem);
+            originalFruits.push("mango");
+            console.log(originalFruits);
+            if (originalFruits.length == 18) {
+                document.getElementById('apple').style.visibility = 'hidden';
+                document.getElementById('banana').style.visibility = 'hidden';
+                document.getElementById('strawbarrey').style.visibility = 'hidden';
+                document.getElementById('mango').style.visibility = 'hidden';
+            }
+
+        });
+
+
+
+        document.getElementById('clearDup').addEventListener('click', function () {
+
+            document.getElementById('apple').style.visibility = 'visible';
+                document.getElementById('banana').style.visibility = 'visible';
+                document.getElementById('strawbarrey').style.visibility = 'visible';
+                document.getElementById('mango').style.visibility = 'visible';
+
+            document.getElementById('basket').innerHTML = '';
+            let fruits = originalFruits.sort();
+            for (let x = fruits.length; x > 0; x--) {
+                if (fruits[x] == fruits[x - 1]) {
+                    fruits.splice(x, 1);
+                }
+            }
+            if (fruits.indexOf('apple') !== -1) {
+                document.getElementById('appleBg').style.backgroundColor = 'green';
+            } else {
+                document.getElementById('appleBg').style.backgroundColor = 'red';
+            }
+
+            if (fruits.indexOf('banana') !== -1) {
+                document.getElementById('bananaBg').style.backgroundColor = 'green';
+            } else {
+                document.getElementById('bananaBg').style.backgroundColor = 'red';
+            }
+
+            if (fruits.indexOf('strawbarrey') !== -1) {
+                document.getElementById('strawbarreyBg').style.backgroundColor = 'green';
+            } else {
+                document.getElementById('strawbarreyBg').style.backgroundColor = 'red';
+            }
+
+            if (fruits.indexOf('mango') !== -1) {
+                document.getElementById('mangoBg').style.backgroundColor = 'green';
+            } else {
+                document.getElementById('mangoBg').style.backgroundColor = 'red';
+            }
+
+
+            console.log(fruits);
+
+            document.getElementById('text').innerText = fruits
+        });
+    </script>
+</body>
+
+</html>

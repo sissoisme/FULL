@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Price Sinor</title>
+</head>
+<style>
+    body {
+        direction: rtl;
+    }
+
+    form {
+        margin: 0 auto;
+        width: 60vw;
+        background-color: skyblue;
+        text-align: center;
+        margin-top: 10vh;
+        border: 4px dashed black;
+        padding-top: 5vw;
+        font-size: 3em;
+        height: 50vh;
+    }
+
+    input {
+        height: 3em;
+        font-size: 0.5em;
+        width: 2em;
+        text-align: center;
+        border-radius: 25%;
+        height: 2em;
+    }
+
+    input[type="button"] {
+        width: 7em;
+        border-radius: 20px;
+        font-size: 0.5em;
+        height: 2em;
+    }
+
+    input:invalid+span:after {
+        content: '✖';
+        padding-left: 5px;
+        color: red;
+    }
+
+    input:valid+span:after {
+        content: '✓';
+        padding-left: 5px;
+        color: green
+    }
+
+    p {
+        font-size: 0.5em;
+        color: red
+    }
+
+    #lableFirstTIme {
+        font-size: 0.5em;
+    }
+
+    div {
+        border: 3px black solid;
+        border-radius: 50%;
+        background-color: yellow;
+        width: 15vw;
+        height: 10vw;
+        display: grid;
+        text-align: center;
+        padding: 4px;
+        position: absolute;
+        top: 200px;
+        left: 270px;
+    }
+
+    div h3 {
+        font-size: 1.2em;
+        place-self: center;
+    }
+
+    @media(max-width:550px) {
+        form {
+            width: 100vw;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1em;
+        }
+
+        p {
+            margin: -20px;
+        }
+
+        div {
+            position: fixed;
+            width: 100%;
+            border-radius: 0px;
+            top: 550px;
+            left: 0;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        input {
+            width: 3em;
+        }
+
+        h3 {
+            margin-top: 0px;
+        }
+    }
+</style>
+
+<body>
+    <!-- form>lable{Enter Your Age Please:}+input:number+input:button{Cheack} -->
+    <form name="priceCheck">
+        <lable for="userAge">אנא הכנס את הגיל שלך:</lable>
+        <input type="number" name="userAge" min="1" max="99" required>
+        <span class="validity"></span><br>
+        <lable for="firstTime" id="lableFirstTIme">חבר שלנו בפייסבוק?</lable>
+        <input type="checkbox" name="firstTime" id="firstTime"><br>
+        <input type="button" value="Check" onclick="userAgeCheck()"><br>
+
+        <hr>
+        <p>*השתמש רק בספרות , טווח 1-99*</p>
+    </form>
+    <hr>
+    <h2>*ילדים מגיל 12 ומטה - עלות כרטיס 75 ש"ח.</h2>
+    <h2>*מבוגרים מגיל 65 ומעלה - עלות כרטיס 50 ש"ח.</h2>
+    <h2>*מחיר מחירון רגיל לכרטיס 150 ש"ח.</h2>
+    <div>
+        <h3>חברים שלנו בפייסבוק נהנים מ 10% הנחה!</h3>
+    </div>
+    <script>
+        function userAgeCheck() {
+            var age = document.priceCheck.userAge.value;
+            var firstTime = document.getElementById("firstTime")
+            var result = 150;
+            var multiply;
+            if (firstTime.checked == true) {
+                multiply = 0.9;
+            } else {
+                multiply = 1;
+            }
+            if (age < 0 || age > 99 || age == !"number") {
+                alert(" הזנת פרטים שגויים");
+                return;
+            }
+            if (age <= 12) {
+                result = 75;
+                confirm(' הגיל שלך הוא - ' + age + ". המחיר עבור כרטיס אחד הוא " + result * multiply + ' ש"ח ' +
+                    "להמשיך לקנייה?");
+            } else if (age >= 65) {
+                result = 50;
+                confirm(' הגיל שלך הוא - ' + age + ". המחיר עבור כרטיס אחד הוא " + result * multiply + ' ש"ח ' +
+                    "להמשיך לקנייה?");
+            } else {
+
+                confirm(' הגיל שלך הוא - ' + age + ". המחיר עבור כרטיס אחד הוא " + result * multiply + ' ש"ח ' +
+                    "להמשיך לקנייה?");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

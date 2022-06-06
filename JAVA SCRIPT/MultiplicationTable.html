@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table </title>
+    <style>
+        td {
+            border: 5px double black;
+            text-align: center;
+            font-size: 20pt;
+            width: 3vw;
+            height: 3vw;
+            background-color: blue;
+            border-radius: 3px;
+            text-shadow: 1px 1px 1px black;
+            color: white;
+        }
+
+
+
+        td:nth-child(1) {
+            background-color: green;
+
+        }
+
+
+        table tr:nth-child(1) :nth-child(n+2) {
+            background-color: green;
+        }
+
+        td:hover {
+            color: rgb(71, 71, 71);
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function numberList() {
+            document.write('<table>');
+            for (i = 1; i < 11; i++) {
+                document.write('<tr>');
+                for (x = 1; x < 11; x++) {
+                    document.write('<td>' + (i * x) + '</td>');
+                }
+                document.write('</tr>');
+            }
+            document.write('</table>');
+
+        }
+        numberList();
+    </script>
+</body>
+
+</html>

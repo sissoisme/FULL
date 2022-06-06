@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSON 1 </title>
+    <style>
+        ul {
+            text-align: left;
+        }
+
+        .container {
+            height: 800px;
+            width: 100%;
+            background-color: teal;
+
+        }
+
+        #main {
+            text-align: center;
+            margin: 0 auto;
+            width: 50%;
+            height: 600px;
+            background-color: orange;
+            border: red 2px solid;
+
+        }
+
+        .buttons {
+            height: 100px;
+            background-color: green;
+        }
+        img{
+            width: 40vw;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div id="main">
+            <div class="buttons">
+                <button type="button" onclick="myFunction1()"> innerText </button>
+                <button type="button" onclick="myFunction2()"> img.src </button>
+                <button type="button" onclick="myFunction3()"> innerHTML </button>
+                <button type="button" onclick="myFunction4()"> style. </button>
+                <button type="button" onclick="myFunction5()"> reset </button>
+            </div>
+            <h1 id="h1text">This is a H1 tag </h1>
+            <img id="img" src="car.jpg" alt="">
+            <p id="p">This is a P tag</p>
+
+        </div>
+
+    </div>
+    <script>
+        var img = document.getElementById("img");
+
+        function myFunction1() {
+            document.getElementById("h1text").innerText = "Hello JavaScript!";
+        }
+
+        function myFunction2() {
+            document.getElementById("img").src = "car2.jpg";
+        }
+
+        function myFunction3() {
+            document.getElementById("p").innerHTML =
+                "<ul><li>item number 1</li><li>item number 2</li><li>item number 3</li></ul>";
+        }
+        function myFunction4() {
+            document.getElementById("main").style.backgroundColor = "blue"
+        }
+        function myFunction5() {
+            document.getElementById("h1text").innerText = "This is a H1 tag";
+            document.getElementById("img").src = "car.jpg";
+            document.getElementById("p").innerHTML = "<p>This is a P tag</p>";
+            document.getElementById("main").style.backgroundColor = "orange";
+
+        }
+
+    </script>
+</body>
+
+</html>

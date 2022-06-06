@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pyremid</title>
+  <style>
+    #box {
+      background-color: black;
+      height: 100vh;
+      animation: flicker 1s infinite alternate;
+      border: white 2px solid;
+
+    }
+
+
+    #box span:nth-child(2),
+    #box span:nth-child(4),
+    #box span:nth-child(7),
+    #box span:nth-child(11),
+    #box span:nth-child(16),
+    #box span:nth-child(22),
+    #box span:nth-child(29),
+    #box span:nth-child(37),
+    #box span:nth-child(46),
+    #box span:nth-child(56) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.1s;
+    }
+
+
+    #box span:nth-child(5),
+    #box span:nth-child(8),
+    #box span:nth-child(12),
+    #box span:nth-child(17),
+    #box span:nth-child(23),
+    #box span:nth-child(30),
+    #box span:nth-child(38),
+    #box span:nth-child(47),
+    #box span:nth-child(57) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.2s;
+    }
+
+    #box span:nth-child(9),
+    #box span:nth-child(13),
+    #box span:nth-child(18),
+    #box span:nth-child(24),
+    #box span:nth-child(31),
+    #box span:nth-child(39),
+    #box span:nth-child(48),
+    #box span:nth-child(58) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.3s;
+    }
+
+
+    #box span:nth-child(14),
+    #box span:nth-child(19),
+    #box span:nth-child(25),
+    #box span:nth-child(32),
+    #box span:nth-child(40),
+    #box span:nth-child(49),
+    #box span:nth-child(59) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.4s;
+    }
+
+    #box span:nth-child(20),
+    #box span:nth-child(26),
+    #box span:nth-child(33),
+    #box span:nth-child(41),
+    #box span:nth-child(50),
+    #box span:nth-child(60) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.5s;
+    }
+
+
+    #box span:nth-child(27),
+    #box span:nth-child(34),
+    #box span:nth-child(42),
+    #box span:nth-child(51),
+    #box span:nth-child(61) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.6s;
+    }
+
+    #box span:nth-child(35),
+    #box span:nth-child(43),
+    #box span:nth-child(52),
+    #box span:nth-child(62) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.7s;
+    }
+
+    #box span:nth-child(44),
+    #box span:nth-child(53),
+    #box span:nth-child(63) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.8s;
+    }
+
+    #box span:nth-child(54),
+    #box span:nth-child(64) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 0.9s;
+    }
+
+    #box span:nth-child(65) {
+      animation: flicker 1s infinite alternate;
+      animation-delay: 1s;
+    }
+
+    @keyframes flicker {
+
+      0% {
+
+        text-shadow:
+          0 0 7px #fff,
+          0 0 12px #fff,
+          0 0 24px #fff,
+          0 0 41px #fff,
+          0 0 65px #fff,
+          0 0 80px #fff,
+          0 0 91px #fff,
+          0 0 156px #fff
+      }
+
+
+
+
+      100% {
+        text-shadow: none
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="box">
+    <script>
+      document.write("<center>");
+      for (let row = 0; row <= 10; row++) {
+        for (let j = 0; j < row; j++) {
+
+          document.write('<span>' + " &#11088 " + '</span>');
+        }
+        document.write(" <br>");
+      }
+      document.write("</center>");
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER COLOR</title>
+    <style>
+        body {
+            margin: 0 auto;
+            display: grid;
+
+        }
+
+        form {
+            display: grid;
+            place-self: center;
+            margin-top: 20vh;
+        }
+
+        input {
+            font-size: 2em;
+            border-radius: 30px;
+            box-shadow: 3px 3px 5px black;
+        }
+
+        input[name="input"] {
+            height: 16vh;
+            width: 30vw;
+            font-size: 1em;
+            text-align: center;
+
+        }
+        @media(max-width:500px){
+            input[name="input"] {
+            height: 12svh;
+            width: 65vw;}
+        }
+    </style>
+</head>
+
+<body>
+    <form name="forme">
+        <input type="text" name="input" placeholder=" Input a name of color you like" list="colorList">
+        <datalist id="colorList">
+            <option value="blue"></option>
+            <option value="pink"></option>
+            <option value="red"></option>
+            <option value="yellow"></option>
+            <option value="green"></option>
+            <option value="orange"></option>
+            <option value="purple"></option>
+            <option value="gray"></option>
+            <option value="white"></option>
+        </datalist><br>
+        <input type="button" value="Click To See" onclick="showColor()"><br>
+        <input type="reset" value="Reset">
+
+    </form>
+    <script>
+        function showColor() {
+            var userInput = document.forme.input.value;
+            document.bgColor = userInput;
+            console.log(userInput);
+            var show = document.bgColor.value;
+            console.log(show);
+        }
+    </script>
+</body>
+
+</html>

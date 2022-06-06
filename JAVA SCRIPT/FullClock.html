@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Clock</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+
+        body {
+            display: grid;
+            background-image: url(media/clockbg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        form {
+            display: grid;
+            place-self: center;
+            margin-top: 1.8vh;
+        }
+
+        input {
+            text-align: center;
+            font-size: 4em;
+            font-family: 'Wallpoet', cursive;
+            border: 5px rgb(207, 207, 207) solid;
+            border-radius: 1000px;
+            width: 48vw;
+            color: rgb(132, 255, 0);
+            box-shadow: -2px -2px 3px black;
+            background-color: rgb(0, 0, 0);
+        }
+
+        div {
+            font-size: 2.5em;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 20px;
+            text-decoration: underline;
+            text-decoration-color: purple;
+        }
+
+        @media(max-width:1100px) {
+            input {
+                font-size: 3em;
+            }
+        }
+
+        @media(max-width:900px) {
+            input {
+                font-size: 2.5em;
+            }
+        }
+
+        @media(max-width:750px) {
+            input {
+                font-size: 2em;
+            }
+        }
+
+        @media(max-width:600px) {
+            body{background-image: url(media/clockbgmobile.jpg);}
+            input {
+                font-size: 1.3em;
+            }
+            div{font-size: 2em;}
+        }
+    </style>
+</head>
+
+<body>
+    <form name="forme">
+        <input type="text" name="clock" id="clock">
+        <div> <br><span id="blessing"></span></p>
+        </div>
+    </form>
+    <script>
+        function runTime() {
+            var tClock = document.forme.clock;
+            var theTime = new Date();
+            var sec = theTime.getSeconds();
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
+            var min = theTime.getMinutes();
+            if (min < 10) {
+                min = "0" + min;
+            }
+            var hrs = theTime.getHours();
+            if (hrs >= 13) {
+                hrs = hrs - 12;
+            }
+
+            if (hrs < 10) {
+                hrs = "0" + hrs;
+            }
+            var amPm;
+            if (theTime > 12) {
+                amPm = "PM";
+            } else {
+                amPm = "AM"
+            };
+            if (theTime.getHours() >= 6 && theTime.getHours() <= 18) {
+                document.getElementById("clock").style.backgroundColor = " rgb(225, 225, 241)"
+                document.getElementById("clock").style.color = "  rgb(108, 3, 9)"
+                document.getElementById("clock").style.borderColor = "black"
+                document.getElementById("clock").style.textShadow = "2px 2px 2px black";
+                document.getElementById("clock").style.fontWeight = 400;
+            }
+            var blessing;
+            if (theTime.getHours() >= 4 && theTime.getHours() <= 8) {
+                blessing = "Good Morning!"
+            } else if (theTime.getHours() >= 8 && theTime.getHours() <= 12) {
+                blessing = "Good Day!"
+            } else if (theTime.getHours() >= 12 && theTime.getHours() <= 16) {
+                blessing = "Good Afternoon!"
+            } else if (theTime.getHours() >= 16 && theTime.getHours() <= 20) {
+                blessing = "Good EVENING!"
+            } else if (theTime.getHours() >= 20 && theTime.getHours() <= 24|| theTime.getHours() == 0 ) {
+                blessing = "Good NIGHT!"
+            }
+            document.getElementById("blessing").innerHTML = blessing
+
+            var clockFace = hrs + ':' + min + ':' + sec + ' - ' + amPm;
+            tClock.value = clockFace;
+
+            setTimeout(runTime, 1000);
+            console.log(theTime.getHours());
+        }
+        runTime();
+        
+    </script>
+</body>
+
+</html>
