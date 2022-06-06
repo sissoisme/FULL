@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack</title>
+    <link rel="stylesheet" type="text/css" href="./feedBack.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script type="text/javascript">
+        firebase.initializeApp({
+            projectId: "mywebsite890-6a0cb",
+        });
+
+        var db = firebase.firestore();
+
+        async function myFunction() {
+            var scoreSelectorElement = document.getElementById("scoreSelector");
+            var classSelectorElement = document.getElementById("classSelector");
+            var userNameElement = document.getElementById("userName");
+            var emailElement = document.getElementById("email");
+            var noteElement = document.getElementById("note");
+            var selectorValue = scoreSelectorElement.value;
+
+            await db.collection("feedback").add({
+                class: classSelectorElement.value,
+                email: emailElement.value,
+                feedback: noteElement.value,
+                user: userNameElement.value,
+                score: selectorValue,
+                dateTime: new Date()
+            });
+            if (selectorValue === "1") {
+                alert(" אנו מתצלים,צוות האתר יפעל בהקדם לשיפור האתר. ");
+                window.close();
+            } else if (selectorValue === "2") {
+                alert("תודה על המשוב. נדאג להשתפר.");
+                window.close();
+            } else if (selectorValue === "3") {
+                alert("תודה על המשוב.");
+                window.close();
+            } else if (selectorValue === "4") {
+                alert("תודה על המשוב. שמחים שנהנתם.");
+                window.close();
+            } else if (selectorValue === "5") {
+                alert("BOO BOOM, !תודה רבה על הציון");
+                window.close();
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <span>בחר שיעור:</span>
+            <select id="classSelector">
+                <option value='10/1'> מפגש שני -10/1</option>
+                <option value='17/1'> מפגש שלישי -17/1</option>
+                <option value='project1'>פרוייקט סיום מיונים</option>
+                <option value='WORD PRESS'>WORD PRESS</option>
+                <option value='31/03IDVSCLASS'>31/03 ID VS CLASS</option>
+                <option value='03/04PositionFixed'>03/04 Position Fixed</option>
+                <option value='05/04CenterIT'>05/04 Center IT</option>
+                <option value='07/04FAQ'>07/04 FAQ</option>
+                <option value='10/04FAQ2'>10/04 FAQ2</option>
+                <option value='10/04AttributeSelectors'>10/04 Attribute Selectors</option>
+                <option value='12/04ResponsiveNavBar'>12/04 Responsive Nav Bar</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </select>
+            <br><br>
+        </div>
+        <div class="line">
+            <span>שם מלא:</span>
+            <input id="userName" name="name" type="text" size="30px" value="">
+        </div>
+        <div class="line">
+            <span>אימייל:</span>
+            <input id="email" name="email" type="email" size="30px" value="">
+        </div>
+        <div>
+            <span>הערות:</span>
+            <form action="/action_page.php">
+                <textarea id="note" name="message" rows="5" cols="18"></textarea>
+                <br><br>
+            </form>
+        </div>
+        <div class="line2">
+            <span>ציון:</span>
+            <select id="scoreSelector">
+                <option value='1'>&#11088;</option>
+                <option value='2'>&#11088;&#11088;</option>
+                <option value='3'>&#11088;&#11088;&#11088;</option>
+                <option value='4'>&#11088;&#11088;&#11088;&#11088;</option>
+                <option value='5'>&#11088;&#11088;&#11088;&#11088;&#11088;</option>
+            </select>
+            </br>
+            </form>
+        </div>
+        <div class="button">
+            <button onclick="myFunction()">שליחה</button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

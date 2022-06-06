@@ -1,0 +1,74 @@
+body{
+   direction: rtl;
+   width: 80%;
+   margin:0 auto;
+
+}
+
+h1{
+   color:blue;
+   text-align: center;
+   font-weight: bold;
+   background-color: rgb(245, 215, 215);
+   font-size: 36px;
+   text-decoration: underline;
+   padding-right: 80px;
+
+}
+
+h2{
+   color:rgb(21, 12, 150);
+   text-align: center;
+
+}
+
+h3{
+   color:rgb(151, 32, 139);
+   text-align: center;
+   font-family: impact;
+
+}
+
+p{
+   color:blue;
+   text-align: center;
+
+}
+
+span{background-color: rgb(144, 233, 248);}
+
+strong, em, ins{color:red;font-weight:bold;}
+
+a{font-size:22px;}
+
+.responText:hover {
+   background-color: yellow;
+   font-size:30px;
+
+}
+
+.youTube{height:400px;}
+
+.feedback-Button{
+   background-color:pink;
+   width:80px;
+   height:30px;
+   text-align:center;
+   padding-top:4px;
+   font-size:22px;
+   border:2px black solid;
+   position:sticky;
+   top:0;
+   float:left;
+   margin-top:-24px;
+
+}
+
+@media(max-width:767px){
+   h2, h3, p{text-align:right;}
+   body{width:98%;}
+   iframe{float:none;width:100%;height: 100%;}
+   p{color:black}
+   .map{height: 300px;;width:100%;}
+
+}

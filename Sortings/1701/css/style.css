@@ -1,0 +1,137 @@
+body{
+        direction: rtl;
+        margin:0 auto;
+
+}
+
+h2{font-size: 35px;}
+
+li, dt,dd{
+        direction: ltr;text-align: left;
+        padding-left: 40px;
+
+}
+
+.nav{
+        background-color: rgb(65, 226, 231);
+        text-align: center;
+        font-size: 28px;
+        height: 36px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+
+}
+
+
+.links{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+
+}
+
+.container{
+        width: 80%;
+        margin: 0 auto;
+
+}
+
+.main{background:-webkit-linear-gradient(top,rgb(181, 181, 248),rgb(246, 248, 151),white,pink);}
+
+.top{
+        background: -webkit-linear-gradient(left,#5d8b5d,#02e486,#5d8b5d,#02e486,#5d8b5d);
+        height: 360px;
+
+}
+
+.middle{
+        background: -webkit-linear-gradient(left,#5d8b5d,#02e486,#5d8b5d,#02e486,#5d8b5d);
+        height: 360px;
+
+}
+
+.bottom{
+        background: -webkit-linear-gradient(left,#5d8b5d,#02e486,#5d8b5d,#02e486,#5d8b5d);
+        height: 360px;
+
+}
+
+.left{
+        height: 100%;
+        width: 50%;
+        float:left;
+        position: relative;
+
+}
+
+.right{
+        height: 100%;
+        width: 50%;
+        float:right;
+}
+
+.footer{background: -webkit-radial-gradient(left,rgb(97, 97, 236),rgb(250, 251, 255));}
+
+.sideBar {position: absolute;}
+
+.box{
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+
+}
+
+.containerImg {
+        position: relative;
+        width: 100px;
+
+}
+
+.image {
+        display: block;
+        width: 100px;
+        height: auto;
+
+}
+
+.overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #f75ca9;
+        overflow: hidden;
+        width: 0;
+        height: 100px;
+        transition: .5s ease;
+        opacity: 0.7;
+}
+
+.containerImg:hover .overlay {width: 100px;}
+
+.text {
+        white-space: nowrap;
+        color: white;
+        font-size: 32px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+}
+
+.nav :hover{background-color:rgb(65, 204, 204);}
+
+.feedback-Button{
+        background-color:pink;
+        width:80px;
+        height:30px;
+        text-align:center;
+        padding-top:4px;
+        font-size:22px;
+        border:2px black solid;
+        position:sticky;
+        top:0;float:left;
+        margin-top:-24px;
+        z-index: 1;
+
+}
